@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CV - Angel Sebastián Rodas Rodriguez</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  /* Barra lateral */
+  .sidebar {
+    width: 280px;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+  }
+
+  .sidebar h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .sidebar p.title {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding-bottom: 5px;
+    width: 100%;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+  }
+
+  .sidebar li {
+    margin-bottom: 8px;
+  }
+
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  /* Cuerpo principal */
+  .main {
+    flex: 1;
+    padding: 30px 40px;
+  }
+
+  .main h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .main h2:hover {
+    color: #1a73e8;
+  }
+
+  .main h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .main ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+    display: none; /* ocultamos por defecto */
+  }
+
+  .highlight {
+    font-weight: 700;
+    color: #1a73e8;
+  }
+
+  a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media(max-width: 768px){
+    .container {
+      flex-direction: column;
+      margin: 20px;
+    }
+
+    .sidebar {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .main {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <!-- Foto opcional -->
+    <img src="imagen.png" alt="Angel Sebastián Rodas Rodriguez">
+    <h1>Angel Sebastián Rodas Rodriguez</h1>
+    <p class="title">Backend Developer | Python Specialist</p>
+
+    <h2>Contacto</h2>
+    <ul>
+      <li>📧 <a href="mailto:asebasrr444@gmail.com">asebasrr444@gmail.com</a></li>
+      <li>📱 +502 3908 5258</li>
+      <li>💻 <a href="https://github.com/Sebas16608">github.com/Sebas16608</a></li>
+      <li>🔗 <a href="https://linkedin.com/in/sebastián-rodas-65564b303">linkedin.com/in/sebastián-rodas-65564b303</a></li>
+      <li>📍 Chimaltenango, Guatemala</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, Django, Flask</li>
+      <li>Django REST Framework</li>
+      <li>PostgreSQL, SQLite, Redis</li>
+      <li>Docker, Linux (Debian)</li>
+      <li>C#, C++</li>
+      <li>REST APIs, JWT Authentication</li>
+      <li>Teamwork & Problem Solving</li>
+    </ul>
+
+    <h2>Language</h2>
+    <ul>
+      <li>Spanish: Native</li>
+      <li>English: Fluent reading, intermediate conversation.</li>
+    </ul>
+  </div>
+
+  <!-- Cuerpo principal -->
+  <div class="main">
+    <h2>Professional Summary</h2>
+    <ul>
+      <li>Backend developer with 9 months of hands-on experience building production systems.</li>
+      <li>Specialized in Python/Django for RESTful APIs, database architecture, and scalable solutions.</li>
+      <li>Delivered complex projects including banking systems and e-commerce platforms serving real users.</li>
+    </ul>
+
+    <h2>Professional Experience</h2>
+    <h3>Backend Developer | Coopesol Cooperative | Jan 2025 - Feb 2025 | Guatemala</h3>
+    <ul>
+      <li>Developed complete banking system platform with Django and Python</li>
+      <li>Built RESTful API for account management and transactions</li>
+      <li>Implemented secure authentication and authorization system</li>
+      <li>Created internal data management APIs</li>
+      <li>Developed Python automation scripts for large-scale data processing</li>
+      <li>Designed PostgreSQL database architecture</li>
+      <li><span class="highlight">Achievement:</span> Delivered production-ready banking system in 2 months</li>
+    </ul>
+
+    <h3>Founder & Backend Developer | Max3D Creations | Mar 2025 - Present | Guatemala</h3>
+    <ul>
+      <li>Building and maintaining SaaS platform for 3D printing business</li>
+      <li>Developed complete e-commerce backend with Django REST Framework</li>
+      <li>Designed and implemented inventory management system</li>
+      <li>Built order processing and invoicing automation</li>
+      <li>Integrated payment gateway</li>
+      <li>Deployed with Docker on Linux (Debian)</li>
+      <li><span class="highlight">Status:</span> In production with active customers</li>
+    </ul>
+
+    <h2>Key Projects</h2>
+    <h3>🏦 Banking System API | Django REST Framework</h3>
+    <ul>
+      <li>Complete banking platform backend for financial cooperative</li>
+      <li>JWT authentication and role-based authorization</li>
+      <li>Complex business logic and validations</li>
+      <li>PostgreSQL with optimized queries and indexing</li>
+      <li>Production-ready security implementation</li>
+    </ul>
+
+    <h3>💬 FreeChan - Imageboard API | Flask</h3>
+    <ul>
+      <li>REST API for forum platform (4chan-style architecture)</li>
+      <li>Multi-board system with threads and replies</li>
+      <li>User authentication and moderation features</li>
+      <li>Scalable database design with complex relationships</li>
+      <li>API documentation with Postman</li>
+    </ul>
+
+    <h3>📦 Inventory Management System | Django REST Framework</h3>
+    <ul>
+      <li>Stock control API for business operations</li>
+      <li>Complete CRUD operations for inventory items</li>
+      <li>Reporting and analytics endpoints</li>
+      <li>Integration capabilities with external systems</li>
+      <li>API documentation and testing</li>
+    </ul>
+
+    <h2>Education & Continuous Learning</h2>
+    <ul>
+      <li>Self-Taught Developer | 2024 - Present</li>
+      <li>Python, Django, Flask through online resources</li>
+      <li>Database design and SQL optimization</li>
+      <li>RESTful API development best practices</li>
+      <li>Linux system administration and Docker</li>
+    </ul>
+
+    <h2>Additional Information</h2>
+    <ul>
+      <li>Available for remote work worldwide</li>
+      <li>Experience with international standards</li>
+      <li>Strong problem-solving skills</li>
+      <li>Comfortable working independently and in teams</li>
+      <li>References available upon request</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  // Mostrar/ocultar listas al hacer click en h2
+  document.querySelectorAll('.main h2').forEach(title => {
+    title.addEventListener('click', () => {
+      const next = title.nextElementSibling;
+      if (next && next.tagName === 'UL') {
+        next.style.display = next.style.display === 'none' ? 'block' : 'none';
+      }
+    });
+  });
+
+  // Mostrar todas las listas al cargar la página
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.main ul').forEach(ul => ul.style.display = 'block');
+  });
+</script>
+
+</body>
+</html>

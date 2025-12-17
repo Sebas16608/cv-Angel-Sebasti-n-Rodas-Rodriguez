@@ -2,154 +2,400 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV - Angel Sebastián Rodas Rodriguez</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-  body {
-    font-family: 'Roboto', sans-serif;
+  * {
     margin: 0;
     padding: 0;
-    background-color: #f4f6f8;
-    color: #333;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
   }
 
   .container {
-    max-width: 900px;
-    margin: 40px auto;
-    display: flex;
-    background-color: #fff;
-    border-radius: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
 
-  /* Barra lateral */
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  .header img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .header .title {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 500;
+  }
+
+  /* Content Layout */
+  .content {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 0;
+  }
+
+  /* Sidebar */
   .sidebar {
-    width: 280px;
-    background-color: #1a73e8;
-    color: #fff;
-    padding: 30px 20px;
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-right: 1px solid #e9ecef;
+  }
+
+  .sidebar-section {
+    margin-bottom: 35px;
+  }
+
+  .sidebar-section h2 {
+    font-size: 1.1rem;
+    color: #667eea;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar-section h2::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: #667eea;
+    border-radius: 2px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+
+  .contact-item .icon {
+    flex-shrink: 0;
+    width: 20px;
     text-align: center;
   }
 
-  .sidebar img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #fff;
+  .contact-item a {
+    color: #667eea;
+    text-decoration: none;
+    word-break: break-all;
   }
 
-  .sidebar h1 {
-    font-size: 20px;
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .skill-tag:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+
+  .language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .language-level {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  /* Main Content */
+  .main {
+    padding: 40px 50px;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    color: #212529;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #667eea;
+    border-radius: 50%;
+  }
+
+  .summary {
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.8;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+  }
+
+  .job {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s;
+  }
+
+  .job:hover {
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    transform: translateX(5px);
+  }
+
+  .job-header {
+    margin-bottom: 15px;
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+    color: #212529;
     font-weight: 700;
     margin-bottom: 5px;
   }
 
-  .sidebar p.title {
-    font-size: 14px;
-    margin-bottom: 20px;
-    font-weight: 500;
+  .job-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
-  .sidebar h2 {
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-    padding-bottom: 5px;
-    width: 100%;
+  .job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 
-  .sidebar ul {
+  .job ul {
     list-style: none;
     padding-left: 0;
-    font-size: 14px;
-    line-height: 1.5;
-    width: 100%;
   }
 
-  .sidebar li {
-    margin-bottom: 8px;
-  }
-
-  .sidebar a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .sidebar a:hover {
-    text-decoration: underline;
-  }
-
-  /* Cuerpo principal */
-  .main {
-    flex: 1;
-    padding: 30px 40px;
-  }
-
-  .main h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #1a73e8;
-    padding-bottom: 5px;
+  .job li {
+    padding-left: 25px;
     margin-bottom: 10px;
-    margin-top: 25px;
-    cursor: pointer;
-    transition: color 0.3s;
+    position: relative;
+    color: #495057;
+    font-size: 0.95rem;
   }
 
-  .main h2:hover {
-    color: #1a73e8;
-  }
-
-  .main h3 {
-    font-size: 16px;
-    font-weight: 500;
-    color: #1a1a1a;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
-
-  .main ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 5px;
-    display: none; /* ocultamos por defecto */
+  .job li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
   }
 
   .highlight {
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 700;
-    color: #1a73e8;
   }
 
-  a {
-    color: #1a73e8;
-    text-decoration: none;
+  .project {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s;
   }
 
-  a:hover {
-    text-decoration: underline;
+  .project:hover {
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .project ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .project li {
+    padding-left: 20px;
+    margin-bottom: 8px;
+    position: relative;
+    color: #495057;
+    font-size: 0.9rem;
+  }
+
+  .project li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 
   /* Responsive */
-  @media(max-width: 768px){
-    .container {
-      flex-direction: column;
-      margin: 20px;
+  @media (max-width: 968px) {
+    .content {
+      grid-template-columns: 1fr;
     }
 
     .sidebar {
-      width: 100%;
-      padding: 20px;
+      border-right: none;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
     }
 
     .main {
-      padding: 20px;
+      padding: 30px 25px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    body {
+      padding: 10px;
+    }
+
+    .header {
+      padding: 30px 20px;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+    }
+
+    .header .title {
+      font-size: 0.95rem;
+    }
+
+    .header img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .sidebar {
+      padding: 25px 20px;
+    }
+
+    .main {
+      padding: 25px 20px;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+    }
+
+    .job-title {
+      font-size: 1rem;
+    }
+
+    .skill-tag {
+      font-size: 0.8rem;
+      padding: 5px 12px;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+    }
+
+    .container {
+      box-shadow: none;
+      max-width: 100%;
+    }
+
+    .job:hover,
+    .project:hover {
+      transform: none;
+      box-shadow: none;
     }
   }
 </style>
@@ -157,136 +403,203 @@
 <body>
 
 <div class="container">
-  <!-- Barra lateral -->
-  <div class="sidebar">
-    <!-- Foto opcional -->
-    <img src="imagen.png" alt="Angel Sebastián Rodas Rodriguez">
+  <!-- Header -->
+  <div class="header">
+    <img src="imagen.png" alt="Angel Sebastián Rodas Rodriguez" onerror="this.style.display='none'">
     <h1>Angel Sebastián Rodas Rodriguez</h1>
-    <p class="title">Backend Developer | Python Specialist</p>
-
-    <h2>Contacto</h2>
-    <ul>
-      <li>📧 <a href="mailto:asebasrr444@gmail.com">asebasrr444@gmail.com</a></li>
-      <li>📱 +502 3908 5258</li>
-      <li>💻 <a href="https://github.com/Sebas16608">github.com/Sebas16608</a></li>
-      <li>🔗 <a href="https://linkedin.com/in/sebastián-rodas-65564b303">linkedin.com/in/sebastián-rodas-65564b303</a></li>
-      <li>📍 Chimaltenango, Guatemala</li>
-    </ul>
-
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, Django, Flask</li>
-      <li>Django REST Framework</li>
-      <li>PostgreSQL, SQLite</li>
-      <li>Docker, Linux (Debian)</li>
-      <li>C#, C++</li>
-      <li>REST APIs, JWT Authentication</li>
-      <li>Teamwork & Problem Solving</li>
-    </ul>
-
-    <h2>Languages</h2>
-    <ul>
-      <li>Spanish: Native</li>
-      <li>English: Fluent reading, intermediate conversation.</li>
-    </ul>
+    <p class="title">Backend Developer | Python & JavaScript Specialist</p>
   </div>
 
-  <!-- Cuerpo principal -->
-  <div class="main">
-    <h2>Professional Summary</h2>
-    <ul>
-      <li>Backend developer with 9 months of hands-on experience building production systems.</li>
-      <li>Specialized in Python/Django for RESTful APIs, database architecture, and scalable solutions.</li>
-      <li>Delivered complex projects including banking systems and e-commerce platforms serving real users.</li>
-    </ul>
+  <div class="content">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h2>Contact</h2>
+        <div class="contact-item">
+          <span class="icon">📧</span>
+          <a href="mailto:asebasrr444@gmail.com">asebasrr444@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📱</span>
+          <span>+502 3908 5258</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">💻</span>
+          <a href="https://github.com/Sebas16608" target="_blank">github.com/Sebas16608</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">🔗</span>
+          <a href="https://linkedin.com/in/sebastián-rodas-65564b303" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <span>Chimaltenango, Guatemala</span>
+        </div>
+      </div>
 
-    <h2>Professional Experience</h2>
-    <h3>Backend Developer | Coopesol Cooperative | Jan 2025 - Feb 2025 | Guatemala</h3>
-    <ul>
-      <li>Developed complete banking system platform with Django and Python</li>
-      <li>Built RESTful API for account management and transactions</li>
-      <li>Implemented secure authentication and authorization system</li>
-      <li>Created internal data management APIs</li>
-      <li>Developed Python automation scripts for large-scale data processing</li>
-      <li>Designed PostgreSQL database architecture</li>
-      <li><span class="highlight">Achievement:</span> Delivered production-ready banking system in 2 months</li>
-    </ul>
+      <div class="sidebar-section">
+        <h2>Skills</h2>
+        <div>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Django REST Framework</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
 
-    <h3>Founder & Backend Developer | Max3D Creations | Mar 2025 - Present | Guatemala</h3>
-    <ul>
-      <li>Building and maintaining SaaS platform for 3D printing business</li>
-      <li>Developed complete e-commerce backend with Django REST Framework</li>
-      <li>Designed and implemented inventory management system</li>
-      <li>Built order processing and invoicing automation</li>
-      <li>Integrated payment gateway</li>
-      <li>Deployed with Docker on Linux (Debian)</li>
-      <li><span class="highlight">Status:</span> In production with active customers</li>
-    </ul>
+      <div class="sidebar-section">
+        <h2>Languages</h2>
+        <div class="language-item">
+          <span>Spanish</span>
+          <span class="language-level">Native</span>
+        </div>
+        <div class="language-item">
+          <span>English</span>
+          <span class="language-level">Fluent</span>
+        </div>
+      </div>
+    </aside>
 
-    <h2>Key Projects</h2>
-    <h3>🏦 Banking System API | Django REST Framework</h3>
-    <ul>
-      <li>Complete banking platform backend for financial cooperative</li>
-      <li>JWT authentication and role-based authorization</li>
-      <li>Complex business logic and validations</li>
-      <li>PostgreSQL with optimized queries and indexing</li>
-      <li>Production-ready security implementation</li>
-    </ul>
+    <!-- Main Content -->
+    <main class="main">
+      <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+          Backend developer with one year of hands-on experience building production systems. Specialized in Python/Django and JavaScript/Node.js for scalable RESTful APIs, database architecture, and robust backend solutions. Delivered complex projects including banking systems and e-commerce platforms serving real users with proven ability to build secure, performant, and maintainable backends.
+        </p>
+      </section>
 
-    <h3>💬 FreeChan - Imageboard API | Flask</h3>
-    <ul>
-      <li>REST API for forum platform (4chan-style architecture)</li>
-      <li>Multi-board system with threads and replies</li>
-      <li>User authentication and moderation features</li>
-      <li>Scalable database design with complex relationships</li>
-      <li>API documentation with Postman</li>
-    </ul>
+      <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
 
-    <h3>📦 Inventory Management System | Django REST Framework</h3>
-    <ul>
-      <li>Stock control API for business operations</li>
-      <li>Complete CRUD operations for inventory items</li>
-      <li>Reporting and analytics endpoints</li>
-      <li>Integration capabilities with external systems</li>
-      <li>API documentation and testing</li>
-    </ul>
+        <div class="job">
+          <div class="job-header">
+            <h3 class="job-title">Backend Developer | Coopesol Cooperative</h3>
+            <div class="job-meta">
+              <span>📅 Jan 2025 - Feb 2025</span>
+              <span>📍 Guatemala</span>
+            </div>
+          </div>
+          <ul>
+            <li>Developed complete banking system platform with Django and Python</li>
+            <li>Built secure RESTful API for account management and transactions</li>
+            <li>Implemented authentication and role-based authorization system</li>
+            <li>Created internal data management APIs and automation scripts</li>
+            <li>Designed optimized PostgreSQL database architecture</li>
+            <li><span class="highlight">Achievement:</span> Delivered production-ready banking system in 2 months</li>
+          </ul>
+        </div>
 
-    <h2>Education & Continuous Learning</h2>
-    <ul>
-      <li>Self-Taught Developer | 2024 - Present</li>
-      <li>Python, Django, Flask through online resources</li>
-      <li>Database design and SQL optimization</li>
-      <li>RESTful API development best practices</li>
-      <li>Linux system administration and Docker</li>
-    </ul>
+        <div class="job">
+          <div class="job-header">
+            <h3 class="job-title">Founder & Backend Developer | Max3D Creations</h3>
+            <div class="job-meta">
+              <span>📅 Mar 2025 - Present</span>
+              <span>📍 Guatemala</span>
+            </div>
+          </div>
+          <ul>
+            <li>Building and maintaining SaaS platform for 3D printing business</li>
+            <li>Developed complete e-commerce backend with Django REST Framework</li>
+            <li>Designed inventory management, order processing, and invoicing automation</li>
+            <li>Integrated payment gateway and customer management system</li>
+            <li>Deployed with Docker on Linux (Debian) for production environment</li>
+            <li><span class="highlight">Status:</span> In production with active paying customers</li>
+          </ul>
+        </div>
+      </section>
 
-    <h2>Additional Information</h2>
-    <ul>
-      <li>Available for remote work worldwide</li>
-      <li>Experience with international standards</li>
-      <li>Strong problem-solving skills</li>
-      <li>Comfortable working independently and in teams</li>
-      <li>References available upon request</li>
-    </ul>
+      <section class="section">
+        <h2 class="section-title">Key Projects</h2>
+
+        <div class="project">
+          <h3 class="project-title">🏦 Banking System API | Django REST Framework</h3>
+          <ul>
+            <li>Complete banking platform backend for financial cooperative</li>
+            <li>JWT authentication and role-based authorization</li>
+            <li>Complex business logic with transaction validations</li>
+            <li>PostgreSQL with optimized queries and indexing</li>
+            <li>Production-ready security and error handling</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">💬 FreeChan - Imageboard API | Flask</h3>
+          <ul>
+            <li>REST API for forum platform with 4chan-style architecture</li>
+            <li>Multi-board system with threads, replies, and moderation</li>
+            <li>User authentication and permission system</li>
+            <li>Scalable database design with complex relationships</li>
+            <li>Comprehensive API documentation</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">📦 Inventory Management System | Django REST Framework</h3>
+          <ul>
+            <li>Stock control API with real-time inventory tracking</li>
+            <li>Complete CRUD operations with advanced filtering</li>
+            <li>Reporting and analytics endpoints</li>
+            <li>Built using DRY principles and reusable base classes</li>
+            <li>Integration-ready with external systems</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">🔐 Google OAuth Integration | Node.js + Express</h3>
+          <ul>
+            <li>Implemented Google OAuth 2.0 authentication</li>
+            <li>JWT token generation and validation</li>
+            <li>User session management</li>
+            <li>RESTful API endpoints for auth flow</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Education & Learning</h2>
+        <div class="job">
+          <div class="job-header">
+            <h3 class="job-title">Self-Taught Backend Developer</h3>
+            <div class="job-meta">
+              <span>📅 2024 - Present</span>
+            </div>
+          </div>
+          <ul>
+            <li>Python, Django, Flask through hands-on projects and production experience</li>
+            <li>JavaScript, Node.js, Express.js for backend development</li>
+            <li>Database design, SQL optimization, and ORM patterns</li>
+            <li>RESTful API design, authentication, and security best practices</li>
+            <li>Linux system administration, Docker, and deployment strategies</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Additional Information</h2>
+        <div class="job">
+          <ul>
+            <li>Available for remote work worldwide</li>
+            <li>Strong problem-solving and analytical skills</li>
+            <li>Experience building production-grade backends</li>
+            <li>Comfortable working independently and in teams</li>
+            <li>Fast learner with passion for clean, maintainable code</li>
+            <li>References available upon request</li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </div>
 </div>
-
-<script>
-  // Mostrar/ocultar listas al hacer click en h2
-  document.querySelectorAll('.main h2').forEach(title => {
-    title.addEventListener('click', () => {
-      const next = title.nextElementSibling;
-      if (next && next.tagName === 'UL') {
-        next.style.display = next.style.display === 'none' ? 'block' : 'none';
-      }
-    });
-  });
-
-  // Mostrar todas las listas al cargar la página
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.main ul').forEach(ul => ul.style.display = 'block');
-  });
-</script>
 
 </body>
 </html>

@@ -3,214 +3,294 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Angel Sebastián Rodas Rodriguez</title>
+<title>CV - Angel Sebastian Rodas Rodriguez</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-min-height:100vh;
-padding:20px;
-line-height:1.6
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-max-width:1100px;
-margin:0 auto;
-background:#fff;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.3)
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  line-height: 1.6;
 }
-.header{
-background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-color:#fff;
-padding:40px;
-text-align:center
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
 }
-.header img{
-width:140px;height:140px;border-radius:50%;
-object-fit:cover;border:5px solid rgba(255,255,255,.3);
-margin-bottom:20px
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
 }
-.header h1{font-size:2.2rem;font-weight:700}
-.header .title{font-size:1.1rem;font-weight:500}
-.content{display:grid;grid-template-columns:340px 1fr}
-.sidebar{
-background:#f8f9fa;
-padding:40px 30px;
-border-right:1px solid #e9ecef
+
+.header img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255,255,255,.3);
+  margin-bottom: 20px;
 }
-.sidebar-section{margin-bottom:35px}
-.sidebar-section h2{
-font-size:1.1rem;color:#667eea;
-margin-bottom:15px;font-weight:700;text-transform:uppercase
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
 }
-.contact-item{
-display:flex;gap:10px;margin-bottom:12px;
-font-size:.9rem;color:#495057
+
+.header .title {
+  font-size: 1.1rem;
+  font-weight: 500;
 }
-.contact-item a{color:#667eea;text-decoration:none}
-.skill-tag{
-display:inline-block;background:#667eea;color:#fff;
-padding:6px 14px;border-radius:20px;
-font-size:.85rem;margin:4px
+
+/* CONTENT */
+.content {
+  display: grid;
+  grid-template-columns: 340px 1fr;
 }
-.main{padding:40px 50px}
-.section{margin-bottom:40px}
-.section-title{
-font-size:1.5rem;color:#212529;
-margin-bottom:20px;border-bottom:3px solid #667eea;
-font-weight:700
+
+/* SIDEBAR */
+.sidebar {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  border-right: 1px solid #e9ecef;
 }
-.summary{
-background:#f8f9fa;padding:20px;border-radius:10px;
-border-left:4px solid #667eea;color:#495057
+
+.sidebar-section {
+  margin-bottom: 35px;
 }
-.job{
-margin-bottom:30px;padding:25px;
-background:#f8f9fa;border-radius:12px;
-border-left:4px solid #667eea
+
+.sidebar-section h2 {
+  font-size: 1.1rem;
+  color: #667eea;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-.job-title{font-size:1.2rem;font-weight:700}
-.job ul{list-style:none}
-.job li{
-padding-left:25px;margin-bottom:10px;position:relative
+
+.contact-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: .9rem;
+  color: #495057;
 }
-.job li::before{
-content:'▸';position:absolute;left:0;color:#667eea
+
+.contact-item a {
+  color: #667eea;
+  text-decoration: none;
 }
-.project{
-margin-bottom:25px;padding:20px;
-border:2px solid #e9ecef;border-radius:10px
+
+.skill-tag {
+  display: inline-block;
+  background: #667eea;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: .85rem;
+  margin: 4px;
 }
-.project-title{font-size:1.1rem;font-weight:700}
+
+/* MAIN */
+.main {
+  padding: 40px 50px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #212529;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #667eea;
+  font-weight: 700;
+}
+
+.summary {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  color: #495057;
+}
+
+.job {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.job ul {
+  list-style: none;
+}
+
+.job li {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.job li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+.project {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* 📱 RESPONSIVE FIX */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .main {
+    padding: 30px 25px;
+  }
+
+  .header {
+    padding: 30px 20px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
-<!-- HEADER -->
-<div class="header">
-<img src="imagen.png" alt="Angel Sebastián Rodas Rodriguez" onerror="this.style.display='none'">
-<h1>Angel Sebastián Rodas Rodriguez</h1>
-<p class="title">Backend Developer | Python (Django / Flask) & TypeScript (Node.js)</p>
+  <!-- HEADER -->
+  <div class="header">
+    <img src="imagen.png" alt="Angel Sebastian Rodas Rodriguez" onerror="this.style.display='none'">
+    <h1>Angel Sebastian Rodas Rodriguez</h1>
+    <p class="title">Backend Developer | Python & TypeScript</p>
+  </div>
+
+  <div class="content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <h2>Contact</h2>
+        <div class="contact-item">📧 <a href="mailto:asebasrr444@gmail.com">asebasrr444@gmail.com</a></div>
+        <div class="contact-item">📱 +502 3908 5258</div>
+        <div class="contact-item">💻 <a href="https://github.com/Sebas16608" target="_blank">github.com/Sebas16608</a></div>
+        <div class="contact-item">🌐 <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">Portfolio</a></div>
+        <div class="contact-item">📍 Guatemala</div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Skills</h2>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">Django REST</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">JWT</span>
+        <span class="skill-tag">Git</span>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+          Backend developer with experience building scalable systems using Python and TypeScript.
+          Focused on Django, Django REST Framework, Flask, and Node.js for APIs and microservices.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="job">
+          <h3 class="job-title">Backend Developer | Coopesol</h3>
+          <ul>
+            <li>Developed banking system with Django</li>
+            <li>Secure REST APIs</li>
+            <li>Role-based permissions</li>
+            <li>PostgreSQL database design</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3 class="job-title">Freelance Backend Developer</h3>
+          <ul>
+            <li>Inventory SaaS</li>
+            <li>Django REST API</li>
+            <li>Node.js + TypeScript microservice</li>
+            <li>Docker deployment</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
 </div>
 
-<div class="content">
-
-<!-- SIDEBAR -->
-<aside class="sidebar">
-
-<div class="sidebar-section">
-<h2>Contact</h2>
-<div class="contact-item">📧 <a href="mailto:asebasrr444@gmail.com">asebasrr444@gmail.com</a></div>
-<div class="contact-item">📱 +502 3908 5258</div>
-<div class="contact-item">💻 <a href="https://github.com/Sebas16608" target="_blank">github.com/Sebas16608</a></div>
-<div class="contact-item">🌐 <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">Portfolio Web</a></div>
-<div class="contact-item">📍 Chimaltenango, Guatemala</div>
-</div>
-
-<div class="sidebar-section">
-<h2>Skills</h2>
-<span class="skill-tag">Python</span>
-<span class="skill-tag">Django</span>
-<span class="skill-tag">Django REST Framework</span>
-<span class="skill-tag">Flask</span>
-<span class="skill-tag">TypeScript</span>
-<span class="skill-tag">Node.js</span>
-<span class="skill-tag">Express.js</span>
-<span class="skill-tag">PostgreSQL</span>
-<span class="skill-tag">Docker</span>
-<span class="skill-tag">Linux</span>
-<span class="skill-tag">REST APIs</span>
-<span class="skill-tag">JWT</span>
-<span class="skill-tag">Git</span>
-</div>
-
-</aside>
-
-<!-- MAIN -->
-<main class="main">
-
-<section class="section">
-<h2 class="section-title">Professional Summary</h2>
-<p class="summary">
-Backend developer with hands-on experience building production-ready systems using
-Python and TypeScript. Strong focus on backend development with Django, Django REST Framework,
-Flask, and Node.js for RESTful APIs and microservices. Experience designing PostgreSQL databases,
-implementing authentication and role-based permissions, and building scalable backend architectures.
-Passionate about clean code, backend engineering, and continuous learning.
-</p>
-</section>
-
-<section class="section">
-<h2 class="section-title">Professional Experience</h2>
-
-<div class="job">
-<h3 class="job-title">Backend Developer | Coopesol Cooperative</h3>
-<ul>
-<li>Developed complete banking system using Django and Python</li>
-<li>Built secure RESTful APIs for account management and transactions</li>
-<li>Implemented authentication and role-based authorization</li>
-<li>Designed optimized PostgreSQL database architecture</li>
-</ul>
-</div>
-
-<div class="job">
-<h3 class="job-title">Freelance Backend Developer | Veterinary Clinic</h3>
-<ul>
-<li>Building SaaS inventory management system</li>
-<li>Django REST Framework API for core services</li>
-<li>Node.js + TypeScript microservice for invoicing</li>
-<li>Dockerized backend for production deployment</li>
-</ul>
-</div>
-
-<div class="job">
-<h3 class="job-title">Founder & Backend Developer | Max3D Creations</h3>
-<ul>
-<li>Developed full e-commerce backend with Django REST Framework</li>
-<li>Inventory, orders, and invoicing automation</li>
-<li>Production deployment on Linux with Docker</li>
-</ul>
-</div>
-
-</section>
-
-<section class="section">
-<h2 class="section-title">Key Projects</h2>
-
-<div class="project">
-<h3 class="project-title">Veterinary Inventory SaaS | Django + Node.js (TS)</h3>
-<ul>
-<li>Django REST API for inventory and clients</li>
-<li>TypeScript microservice with Express.js</li>
-<li>PostgreSQL database design</li>
-</ul>
-</div>
-
-<div class="project">
-<h3 class="project-title">Banking System API | Django REST Framework</h3>
-<ul>
-<li>JWT authentication and RBAC</li>
-<li>Transaction business logic</li>
-</ul>
-</div>
-
-<div class="project">
-<h3 class="project-title">FreeChan API | Flask</h3>
-<ul>
-<li>Imageboard-style backend</li>
-<li>Boards, threads, moderation system</li>
-</ul>
-</div>
-
-</section>
-
-</main>
-</div>
-</div>
 </body>
 </html>

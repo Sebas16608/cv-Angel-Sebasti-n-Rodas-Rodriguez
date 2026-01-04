@@ -3,308 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Angel Sebastian Rodas Rodriguez | Backend Developer</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>CV - Ángel Sebastián Rodas Rodríguez | Backend Developer</title>
 <style>
-/* ===== RESET & BASE ===== */
+/* ===== ESTILOS BASADOS EN TU IMAGEN ORIGINAL ===== */
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #ecf0f1;
+  --dark: #2c3e50;
+  --gray: #7f8c8d;
+}
+
+@page {
+  size: A4;
+  margin: 0.5cm;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@page {
-  size: A4;
-  margin: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
   color: #333;
-  background-color: #f5f7fa;
-  line-height: 1.6;
-  padding: 20px;
+  background: #f5f5f5;
+  padding: 15px;
+  font-size: 14px;
 }
 
-.cv-container {
-  max-width: 210mm; /* A4 width */
-  min-height: 297mm; /* A4 height */
+.cv-wrapper {
+  max-width: 210mm;
+  min-height: 297mm;
   margin: 0 auto;
   background: white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== HEADER ===== */
-.header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+.cv-header {
+  background: var(--primary);
   color: white;
-  padding: 40px 50px 30px;
-  position: relative;
+  padding: 30px 40px;
+  border-bottom: 4px solid var(--accent);
 }
 
-.profile-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.3);
-  position: absolute;
-  right: 50px;
-  top: 40px;
-  object-fit: cover;
-  background-color: #f1f1f1;
-}
-
-.name {
-  font-size: 36px;
+.cv-header h1 {
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 8px;
   letter-spacing: -0.5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
-.title {
-  font-size: 22px;
-  font-weight: 400;
-  opacity: 0.9;
-  margin-bottom: 20px;
+.cv-header .title {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ecf0f1;
+  margin-bottom: 15px;
 }
 
-.contact-info {
+.contact-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 10px;
+  gap: 20px;
+  font-size: 13px;
+  color: #bdc3c7;
 }
 
-.contact-item {
+.contact-bar a {
+  color: #ecf0f1;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 15px;
+  gap: 5px;
 }
 
-.contact-item i {
-  width: 20px;
-  text-align: center;
+.contact-bar a:hover {
+  color: var(--secondary);
 }
 
-.contact-item a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s;
+/* ===== LAYOUT DE 2 COLUMNAS ===== */
+.cv-main {
+  display: flex;
+  flex: 1;
 }
 
-.contact-item a:hover {
-  opacity: 0.8;
+/* COLUMNA IZQUIERDA (30%) */
+.cv-sidebar {
+  width: 30%;
+  background: #f9f9f9;
+  padding: 30px 25px;
+  border-right: 2px solid #eee;
 }
 
-/* ===== MAIN CONTENT ===== */
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  min-height: calc(297mm - 180px);
+/* COLUMNA DERECHA (70%) */
+.cv-content {
+  width: 70%;
+  padding: 30px 35px;
 }
 
-/* ===== SIDEBAR ===== */
-.sidebar {
-  background: #f8fafc;
-  padding: 40px 30px;
-  border-right: 1px solid #eaeaea;
-}
-
+/* ===== SECCIONES ===== */
 .section {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  color: #1e3c72;
-  margin-bottom: 18px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #1e3c72;
+  color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--secondary);
+  letter-spacing: 1px;
 }
 
-/* Skills */
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.skill-item {
-  margin-bottom: 10px;
-}
-
-.skill-name {
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #444;
-}
-
-.skill-level {
-  height: 8px;
-  background: #e0e0e0;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-bar {
-  height: 100%;
-  background: #2a5298;
-  border-radius: 4px;
-}
-
-/* Education */
-.education-item {
+/* Skills en cajas como tu imagen */
+.skill-category {
   margin-bottom: 20px;
 }
 
-.education-title {
+.skill-category h4 {
+  font-size: 13px;
+  color: var(--dark);
+  margin-bottom: 10px;
   font-weight: 600;
-  color: #444;
-  margin-bottom: 5px;
 }
 
-.education-meta {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 3px;
-}
-
-.education-desc {
-  font-size: 14px;
-  color: #777;
-}
-
-/* Languages */
-.language-item {
+.skill-tags {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.language-name {
+.skill-tag {
+  background: var(--secondary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 12px;
   font-weight: 500;
 }
 
-.language-level {
-  color: #2a5298;
+/* Educación */
+.education-item {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 2px solid #ddd;
+}
+
+.education-item h4 {
+  font-size: 14px;
   font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 3px;
 }
 
-/* ===== MAIN COLUMN ===== */
-.main-column {
-  padding: 40px 35px;
+.education-meta {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 5px;
 }
 
-/* Summary */
-.summary {
-  font-size: 16px;
-  color: #444;
-  margin-bottom: 35px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-/* Experience */
+/* ===== EXPERIENCIA ===== */
 .experience-item {
-  margin-bottom: 35px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-left: 4px solid var(--secondary);
 }
 
 .experience-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .experience-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-  color: #1e3c72;
+  color: var(--primary);
 }
 
-.experience-subtitle {
-  font-size: 16px;
-  color: #555;
-  font-weight: 500;
+.experience-company {
+  font-size: 14px;
+  color: var(--secondary);
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
 .experience-date {
-  background: #1e3c72;
+  background: var(--primary);
   color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .experience-list {
   list-style: none;
-  padding-left: 5px;
 }
 
 .experience-list li {
   position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 13px;
   color: #555;
 }
 
 .experience-list li:before {
-  content: "▸";
+  content: "▶";
   position: absolute;
   left: 0;
-  color: #2a5298;
-  font-weight: bold;
+  color: var(--secondary);
+  font-size: 10px;
 }
 
-/* Projects */
-.project-item {
-  margin-bottom: 25px;
-  padding: 20px;
-  background: #f8fafc;
-  border-radius: 8px;
-  border-left: 4px solid #2a5298;
-}
-
-.project-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1e3c72;
-  margin-bottom: 10px;
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 15px;
-}
-
-.tech-tag {
-  background: #e0e7ff;
-  color: #1e3c72;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.project-desc {
-  color: #555;
-  font-size: 15px;
-}
-
-/* ===== PRINT STYLES ===== */
+/* ===== IMPRIMIR PDF ===== */
 @media print {
   body {
     background: white;
@@ -312,262 +236,187 @@ body {
     font-size: 12pt;
   }
   
-  .cv-container {
+  .cv-wrapper {
     max-width: 100%;
     min-height: auto;
     box-shadow: none;
-    border-radius: 0;
     margin: 0;
-    padding: 0;
   }
   
-  .header {
-    padding: 25px 40px 20px;
+  .cv-header {
+    padding: 20px 30px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
   
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    right: 40px;
-    top: 30px;
+  .cv-header h1 {
+    font-size: 24pt;
   }
   
-  .name {
-    font-size: 28pt;
-  }
-  
-  .title {
-    font-size: 16pt;
-  }
-  
-  .content {
-    min-height: auto;
-  }
-  
-  .sidebar, .main-column {
-    padding: 30px 25px;
+  .cv-sidebar, .cv-content {
+    padding: 20px 25px;
   }
   
   .section {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   
   .section-title {
     font-size: 14pt;
   }
   
-  a {
-    color: #1e3c72 !important;
-    text-decoration: none;
-  }
-  
   .no-print {
     display: none;
   }
   
-  .page-break {
-    page-break-before: always;
+  a {
+    color: var(--primary) !important;
+    text-decoration: none;
   }
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1100px) {
-  body {
-    padding: 10px;
+@media (max-width: 900px) {
+  .cv-main {
+    flex-direction: column;
   }
   
-  .profile-img {
-    position: relative;
-    right: auto;
-    top: auto;
-    margin-bottom: 20px;
+  .cv-sidebar, .cv-content {
+    width: 100%;
   }
   
-  .header {
-    text-align: center;
-  }
-  
-  .contact-info {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
-  
-  .sidebar {
+  .cv-sidebar {
     border-right: none;
-    border-bottom: 1px solid #eaeaea;
-  }
-  
-  .header {
-    padding: 30px 25px 25px;
-  }
-  
-  .name {
-    font-size: 28px;
-  }
-  
-  .title {
-    font-size: 18px;
+    border-bottom: 2px solid #eee;
   }
 }
-
-/* ===== UTILITIES ===== */
-.mt-10 { margin-top: 10px; }
-.mb-10 { margin-bottom: 10px; }
-.mb-20 { margin-bottom: 20px; }
-.text-center { text-align: center; }
 </style>
 </head>
 <body>
 
-<div class="cv-container">
+<div class="cv-wrapper">
   
   <!-- HEADER -->
-  <header class="header">
-    <!-- Imagen de perfil (reemplaza "imagen.png" con tu imagen) -->
-    <img src="imagen.png" alt="Angel Sebastian Rodas Rodriguez" class="profile-img" onerror="this.style.display='none'">
+  <header class="cv-header">
+    <h1>Ángel Sebastián Rodas Rodríguez</h1>
+    <div class="title">Backend Developer | Python & TypeScript</div>
     
-    <h1 class="name">Angel Sebastian Rodas Rodriguez</h1>
-    <h2 class="title">Backend Developer | Python & TypeScript Specialist</h2>
-    
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:asebasrr444@gmail.com">asebasrr444@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <span>+502 3908 5258</span>
-      </div>
-      <div class="contact-item">
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/Sebas16608" target="_blank">github.com/Sebas16608</a>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-globe"></i>
-        <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">Portfolio</a>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Guatemala</span>
-      </div>
+    <div class="contact-bar">
+      <a href="mailto:asebasrr444@gmail.com">📧 asebasrr444@gmail.com</a>
+      <a href="tel:+50239085258">📱 +502 3908 5258</a>
+      <a href="https://github.com/Sebas16608" target="_blank">💻 github.com/Sebas16608</a>
+      <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">🌐 Portfolio</a>
+      <span>📍 Guatemala, Chimaltenango</span>
     </div>
   </header>
   
-  <div class="content">
+  <div class="cv-main">
     
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="cv-sidebar">
       
-      <!-- Skills -->
+      <!-- PERFIL PROFESIONAL -->
       <section class="section">
-        <h3 class="section-title">Technical Skills</h3>
-        <div class="skills-list">
-          <div class="skill-item">
-            <div class="skill-name">Python & Django</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 95%"></div></div>
+        <h3 class="section-title">Perfil Profesional</h3>
+        <p style="font-size: 13px; color: #555; line-height: 1.6;">
+          Desarrollador Backend especializado en Python (Django, Flask) y TypeScript/Node.js. 
+          Construyo APIs REST robustas y sistemas escalables. Autodidacta con experiencia 
+          en proyectos reales en producción.
+        </p>
+      </section>
+      
+      <!-- HABILIDADES TÉCNICAS -->
+      <section class="section">
+        <h3 class="section-title">Habilidades Técnicas</h3>
+        
+        <div class="skill-category">
+          <h4>Backend & APIs</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Django REST</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">REST APIs</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-name">Django REST Framework</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 90%"></div></div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Lenguajes</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">SQL</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-name">PostgreSQL / SQL</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 85%"></div></div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>Bases de Datos</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQLite</span>
           </div>
-          <div class="skill-item">
-            <div class="skill-name">Node.js / Express</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 80%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">TypeScript (Backend)</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 75%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Docker / Linux</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 80%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">REST APIs</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 90%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Git / GitHub</div>
-            <div class="skill-level"><div class="skill-bar" style="width: 85%"></div></div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>DevOps & Tools</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
           </div>
         </div>
       </section>
       
-      <!-- Education -->
+      <!-- EDUCACIÓN -->
       <section class="section">
-        <h3 class="section-title">Education</h3>
+        <h3 class="section-title">Educación</h3>
+        
         <div class="education-item">
-          <div class="education-title">Ingeniería en Sistemas</div>
+          <h4>Ingeniería en Sistemas</h4>
           <div class="education-meta">Universidad Mariano Gálvez, Guatemala</div>
           <div class="education-meta">2025 - Presente (Primer año)</div>
-          <div class="education-desc">Cursando primer año, complementando con experiencia práctica en desarrollo backend.</div>
         </div>
+        
         <div class="education-item">
-          <div class="education-title">Desarrollador Autodidacta</div>
+          <h4>Desarrollador Autodidacta</h4>
           <div class="education-meta">Especialización Backend</div>
           <div class="education-meta">2024 - Presente</div>
-          <div class="education-desc">Python, Django, APIs REST, Bases de Datos, Docker, Linux.</div>
         </div>
       </section>
       
-      <!-- Languages -->
+      <!-- IDIOMAS -->
       <section class="section">
-        <h3 class="section-title">Languages</h3>
-        <div class="language-item">
-          <span class="language-name">Español</span>
-          <span class="language-level">Nativo</span>
-        </div>
-        <div class="language-item">
-          <span class="language-name">Inglés</span>
-          <span class="language-level">Lectura Avanzada</span>
-        </div>
+        <h3 class="section-title">Idiomas</h3>
+        <p style="font-size: 13px; color: #555;">
+          <strong>Español:</strong> Nativo<br>
+          <strong>Inglés:</strong> Lectura técnica avanzada
+        </p>
       </section>
       
     </aside>
     
-    <!-- MAIN COLUMN -->
-    <main class="main-column">
+    <!-- COLUMNA DERECHA -->
+    <main class="cv-content">
       
-      <!-- Professional Summary -->
+      <!-- EXPERIENCIA PROFESIONAL -->
       <section class="section">
-        <h3 class="section-title">Professional Summary</h3>
-        <p class="summary">
-          Desarrollador Backend con experiencia práctica construyendo sistemas en producción. 
-          Especializado en Python (Django, Flask) y TypeScript/Node.js para APIs REST y microservicios. 
-          Autodidacta proactivo con capacidad de entregar proyectos completos en plazos ajustados. 
-          Actualmente cursando Ingeniería en Sistemas mientras desarrollo soluciones reales para clientes.
-        </p>
-      </section>
-      
-      <!-- Experience -->
-      <section class="section">
-        <h3 class="section-title">Professional Experience</h3>
+        <h3 class="section-title">Experiencia Profesional</h3>
         
         <div class="experience-item">
           <div class="experience-header">
             <div>
               <h4 class="experience-title">Backend Developer</h4>
-              <div class="experience-subtitle">Coopesol Cooperative | Sistema Bancario</div>
+              <div class="experience-company">Coopesol Cooperative | Sistema Bancario</div>
             </div>
             <div class="experience-date">Ene 2025 - Feb 2025</div>
           </div>
           <ul class="experience-list">
-            <li>Desarrollé una plataforma bancaria completa con Django en 2 meses</li>
-            <li>Implementé API REST segura con autenticación JWT y permisos por roles</li>
-            <li>Diseñé arquitectura de base de datos PostgreSQL para transacciones financieras</li>
-            <li>Creé scripts Python para automatización de procesamiento masivo de datos</li>
-            <li><strong>Logro:</strong> Sistema en producción entregado en plazo récord</li>
+            <li>Desarrollé sistema bancario completo con Django en 2 meses</li>
+            <li>API REST con autenticación JWT y permisos por roles</li>
+            <li>Diseño de base de datos PostgreSQL para transacciones</li>
+            <li>Scripts Python para procesamiento masivo de datos</li>
           </ul>
         </div>
         
@@ -575,16 +424,15 @@ body {
           <div class="experience-header">
             <div>
               <h4 class="experience-title">Founder & Backend Developer</h4>
-              <div class="experience-subtitle">Max3D Creations | SaaS de Inventario</div>
+              <div class="experience-company">Max3D Creations | SaaS de Inventario</div>
             </div>
             <div class="experience-date">Mar 2025 - Presente</div>
           </div>
           <ul class="experience-list">
-            <li>Desarrollo completo del backend para plataforma de e-commerce de impresión 3D</li>
-            <li>API Django REST para gestión de inventario, órdenes y facturación</li>
-            <li>Integración con pasarela de pagos (Stripe/PayPal)</li>
-            <li>Despliegue con Docker en Linux (Debian)</li>
-            <li><strong>Estado:</strong> En producción con clientes activos</li>
+            <li>Backend Django REST para e-commerce de impresión 3D</li>
+            <li>Sistema de inventario, órdenes y facturación</li>
+            <li>Integración con pasarela de pagos</li>
+            <li>Despliegue con Docker en Linux</li>
           </ul>
         </div>
         
@@ -592,65 +440,58 @@ body {
           <div class="experience-header">
             <div>
               <h4 class="experience-title">Freelance Backend Developer</h4>
-              <div class="experience-subtitle">Proyectos Independientes</div>
+              <div class="experience-company">Proyectos Independientes</div>
             </div>
             <div class="experience-date">2024 - Presente</div>
           </div>
           <ul class="experience-list">
-            <li>Microservicios Node.js + TypeScript para procesamiento específico</li>
-            <li>APIs Django/Flask para diversos casos de negocio</li>
-            <li>Dockerización de aplicaciones para despliegue consistente</li>
-            <li>Colaboración remota con clientes internacionales</li>
+            <li>Microservicios Node.js + TypeScript</li>
+            <li>APIs Django/Flask para diversos casos de uso</li>
+            <li>Dockerización de aplicaciones</li>
+            <li>Colaboración remota con clientes</li>
           </ul>
         </div>
         
       </section>
       
-      <!-- Projects -->
+      <!-- PROYECTOS DESTACADOS -->
       <section class="section">
-        <h3 class="section-title">Key Projects</h3>
+        <h3 class="section-title">Proyectos Destacados</h3>
         
-        <div class="project-item">
-          <h4 class="project-title">Banking System API</h4>
-          <div class="project-tech">
-            <span class="tech-tag">Django</span>
-            <span class="tech-tag">Django REST</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">JWT</span>
-            <span class="tech-tag">Docker</span>
+        <div class="experience-item">
+          <h4 class="experience-title" style="margin-bottom: 10px;">Banking System API</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django REST</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">JWT</span>
           </div>
-          <p class="project-desc">
-            Plataforma bancaria completa con lógica financiera compleja, autenticación segura, 
-            roles de usuario y base de datos optimizada para transacciones.
+          <p style="font-size: 13px; color: #555;">
+            Plataforma bancaria completa con lógica financiera, autenticación segura y base de datos optimizada.
           </p>
         </div>
         
-        <div class="project-item">
-          <h4 class="project-title">Inventory Management SaaS</h4>
-          <div class="project-tech">
-            <span class="tech-tag">Django REST</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Linux</span>
-            <span class="tech-tag">Stripe API</span>
+        <div class="experience-item">
+          <h4 class="experience-title" style="margin-bottom: 10px;">FreeChan - Imageboard API</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Flask</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">REST API</span>
           </div>
-          <p class="project-desc">
-            Sistema de gestión de inventario en tiempo real para negocio de impresión 3D, 
-            con procesamiento de órdenes, facturación automatizada y panel de administración.
+          <p style="font-size: 13px; color: #555;">
+            API estilo foro con sistema multi-board, threads y características de moderación.
           </p>
         </div>
         
-        <div class="project-item">
-          <h4 class="project-title">FreeChan - Imageboard API</h4>
-          <div class="project-tech">
-            <span class="tech-tag">Flask</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">REST API</span>
-            <span class="tech-tag">JWT</span>
+        <div class="experience-item">
+          <h4 class="experience-title" style="margin-bottom: 10px;">Inventory Management SaaS</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django REST</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Docker</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Linux</span>
           </div>
-          <p class="project-desc">
-            API estilo foro (4chan) con sistema multi-board, threads, respuestas y características 
-            de moderación. Diseñado para escalabilidad y alto tráfico concurrente.
+          <p style="font-size: 13px; color: #555;">
+            Sistema de gestión de inventario en tiempo real para negocio de impresión 3D.
           </p>
         </div>
         
@@ -659,26 +500,11 @@ body {
     </main>
   </div>
   
-  <!-- Print instructions (hidden in print) -->
-  <div class="no-print" style="text-align: center; padding: 20px; color: #666; font-size: 14px;">
-    <p><i class="fas fa-print"></i> Para imprimir en PDF: Presiona Ctrl+P y selecciona "Guardar como PDF"</p>
+  <!-- Instrucciones para imprimir -->
+  <div class="no-print" style="text-align: center; padding: 15px; color: #666; font-size: 13px; border-top: 1px solid #eee;">
+    <p>📄 Para imprimir en PDF: Presiona Ctrl+P → Selecciona "Guardar como PDF"</p>
   </div>
 </div>
-
-<script>
-// Script para mejorar la experiencia de impresión
-document.addEventListener('DOMContentLoaded', function() {
-  // Añadir evento al botón de impresión si lo quisieras
-  console.log('CV listo para imprimir. Usa Ctrl+P para generar PDF.');
-  
-  // Si quieres un botón de impresión, descomenta:
-  // const printBtn = document.createElement('button');
-  // printBtn.innerHTML = '<i class="fas fa-print"></i> Imprimir/Guardar PDF';
-  // printBtn.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#1e3c72;color:white;border:none;padding:12px 20px;border-radius:5px;cursor:pointer;z-index:1000;';
-  // printBtn.addEventListener('click', () => window.print());
-  // document.body.appendChild(printBtn);
-});
-</script>
 
 </body>
 </html>

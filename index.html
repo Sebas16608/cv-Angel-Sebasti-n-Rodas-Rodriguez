@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV - Angel Sebastián Rodas Rodriguez | Backend Developer</title>
 <style>
-/* ===== STYLES BASED ON YOUR ORIGINAL IMAGE ===== */
 :root {
   --primary: #2c3e50;
   --secondary: #3498db;
@@ -124,7 +123,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* Skills boxes like your image */
+/* Skills boxes */
 .skill-category {
   margin-bottom: 20px;
 }
@@ -171,7 +170,7 @@ body {
   margin-bottom: 5px;
 }
 
-/* ===== EXPERIENCE ===== */
+/* Experience */
 .experience-item {
   margin-bottom: 25px;
   padding: 20px;
@@ -264,14 +263,15 @@ body {
   .section-title {
     font-size: 14pt;
   }
+
+  /* Links en PDF se ven blancos sobre fondo azul */
+  .cv-header a {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
   
   .no-print {
     display: none;
-  }
-  
-  a {
-    color: var(--primary) !important;
-    text-decoration: none;
   }
 }
 
@@ -459,39 +459,38 @@ body {
         <h3 class="section-title">Key Projects</h3>
         
         <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">Banking System API</h4>
+          <h4 class="experience-title" style="margin-bottom: 10px;">School Platform</h4>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django REST</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">JWT</span>
-          </div>
-          <p style="font-size: 13px; color: #555;">
-            Complete banking platform with complex financial logic, secure authentication, and optimized database.
-          </p>
-        </div>
-        
-        <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">FreeChan - Imageboard API</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Flask</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">REST API</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
           </div>
           <p style="font-size: 13px; color: #555;">
-            4chan-style forum API with multi-board system, threads, replies, and moderation features.
+            Platform for school management including student records, grades, and communication between teachers and parents.
           </p>
         </div>
         
         <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">Inventory Management SaaS</h4>
+          <h4 class="experience-title" style="margin-bottom: 10px;">Inventory Management System</h4>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django REST</span>
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Docker</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Linux</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
           </div>
           <p style="font-size: 13px; color: #555;">
-            Real-time inventory management system for 3D printing business with order processing automation.
+            Real-time inventory management system for small businesses with order tracking and automated notifications.
+          </p>
+        </div>
+        
+        <div class="experience-item">
+          <h4 class="experience-title" style="margin-bottom: 10px;">E-commerce Platform</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Stripe/PayPal</span>
+            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">REST API</span>
+          </div>
+          <p style="font-size: 13px; color: #555;">
+            Full-featured e-commerce platform with product catalog, shopping cart, payment gateway, and order management.
           </p>
         </div>
         

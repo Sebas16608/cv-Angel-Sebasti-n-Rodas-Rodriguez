@@ -50,6 +50,17 @@ body {
   color: white;
   padding: 30px 40px;
   border-bottom: 4px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cv-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
 }
 
 .cv-header h1 {
@@ -264,7 +275,6 @@ body {
     font-size: 14pt;
   }
 
-  /* Links en PDF se ven blancos sobre fondo azul */
   .cv-header a {
     color: #ffffff !important;
     text-decoration: none;
@@ -298,15 +308,17 @@ body {
   
   <!-- HEADER -->
   <header class="cv-header">
-    <h1>Angel Sebastián Rodas Rodriguez</h1>
-    <div class="title">Backend Developer | Python & TypeScript Specialist</div>
-    
-    <div class="contact-bar">
-      <a href="mailto:asebasrr444@gmail.com">📧 asebasrr444@gmail.com</a>
-      <a href="tel:+50239085258">📱 +502 3908 5258</a>
-      <a href="https://github.com/Sebas16608" target="_blank">💻 github.com/Sebas16608</a>
-      <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">🌐 Portfolio</a>
-      <span>📍 Guatemala, Chimaltenango</span>
+    <img src="imagen.png" alt="Angel Sebastian Rodas Rodriguez">
+    <div>
+      <h1>Angel Sebastián Rodas Rodriguez</h1>
+      <div class="title">Backend Developer | Python & TypeScript Specialist</div>
+      <div class="contact-bar">
+        <a href="mailto:asebasrr444@gmail.com">📧 asebasrr444@gmail.com</a>
+        <a href="tel:+50239085258">📱 +502 3908 5258</a>
+        <a href="https://github.com/Sebas16608" target="_blank">💻 github.com/Sebas16608</a>
+        <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">🌐 Portfolio</a>
+        <span>📍 Guatemala, Chimaltenango</span>
+      </div>
     </div>
   </header>
   
@@ -321,7 +333,7 @@ body {
         <p style="font-size: 13px; color: #555; line-height: 1.6;">
           Backend Developer specialized in Python (Django, Flask) and TypeScript/Node.js. 
           I build robust REST APIs and scalable systems. Self-taught developer with 
-          production experience in real projects.
+          production experience in real projects, currently working on a SaaS inventory platform (Invorax).
         </p>
       </section>
       
@@ -423,16 +435,17 @@ body {
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <h4 class="experience-title">Founder & Backend Developer</h4>
-              <div class="experience-company">Max3D Creations | Inventory SaaS</div>
+              <h4 class="experience-title">Backend Developer & SaaS Creator</h4>
+              <div class="experience-company">Invorax | Inventory Management SaaS</div>
             </div>
             <div class="experience-date">Mar 2025 - Present</div>
           </div>
           <ul class="experience-list">
-            <li>Django REST backend for 3D printing e-commerce platform</li>
-            <li>Inventory management, order processing, and billing system</li>
-            <li>Payment gateway integration (Stripe/PayPal)</li>
-            <li>Docker deployment on Linux server</li>
+            <li>Django REST backend for cloud-based inventory management</li>
+            <li>Real-time order tracking, stock updates, and automated notifications</li>
+            <li>Payment gateway integration (Stripe/PayPal) for client subscriptions</li>
+            <li>Dockerized deployment on Linux server ensuring scalable and reliable operations</li>
+            <li>User roles, permissions, and multi-client management implemented</li>
           </ul>
         </div>
         
@@ -471,14 +484,14 @@ body {
         </div>
         
         <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">Inventory Management System</h4>
+          <h4 class="experience-title" style="margin-bottom: 10px;">Invorax | Inventory Management SaaS</h4>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django REST</span>
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Docker</span>
             <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
           </div>
           <p style="font-size: 13px; color: #555;">
-            Real-time inventory management system for small businesses with order tracking and automated notifications.
+            Real-time inventory management SaaS for businesses with stock tracking, automated notifications, order processing, and multi-client support.
           </p>
         </div>
         

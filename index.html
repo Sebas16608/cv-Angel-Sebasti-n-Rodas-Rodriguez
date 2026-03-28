@@ -9,261 +9,203 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        @media print {
-            .no-print { display: none; }
-            body { background-color: white; padding: 0; }
-            .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
-        }
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #0f172a;
-            margin-bottom: 1.5rem;
-        }
-        .section-title::after {
-            content: "";
-            height: 2px;
-            flex-grow: 1;
-            background: linear-gradient(to right, #2563eb, transparent);
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        @media print { .no-print { display: none; } body { background-color: white; padding: 0; } .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; } }
+        .section-title { display: flex; align-items: center; gap: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #0f172a; margin-bottom: 1.5rem; font-size: 0.85rem; }
+        .section-title::after { content: ""; height: 2px; flex-grow: 1; background: linear-gradient(to right, #2563eb, transparent); }
+        .tech-pill { background-color: #f1f5f9; border: 1px solid #e2e8f0; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <div class="cv-container max-w-5xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden min-h-[1500px]">
+    <div class="cv-container max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden min-h-[1600px] flex flex-col md:flex-row border border-slate-200">
         
-        <!-- Header Principal -->
-        <header class="bg-slate-900 text-white p-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-8">
-                <div class="w-32 h-32 rounded-full border-4 border-blue-500 overflow-hidden shadow-2xl shrink-0">
-                    <!-- Usando la foto proporcionada -->
+        <!-- Sidebar Izquierda -->
+        <aside class="w-full md:w-80 bg-slate-900 text-slate-300 p-8 flex flex-col">
+            <div class="text-center mb-10">
+                <div class="w-36 h-36 rounded-2xl border-2 border-blue-500/50 overflow-hidden shadow-2xl mx-auto mb-6 rotate-3 hover:rotate-0 transition-transform duration-500">
                     <img src="imagen.png" alt="Angel Sebastián" class="w-full h-full object-cover">
                 </div>
-                <div>
-                    <h1 class="text-4xl font-extrabold tracking-tight">Angel Sebastián Rodas</h1>
-                    <p class="text-blue-400 text-xl font-medium mt-1 uppercase tracking-widest">Backend Engineer & Software Architect</p>
-                    <div class="flex flex-wrap gap-4 mt-4 text-sm text-slate-300">
-                        <span>📍 Chimaltenango, Guatemala</span>
-                        <span>📧 asebasrr444@gmail.com</span>
-                        <span>📱 +502 3908 5258</span>
-                    </div>
-                </div>
+                <h1 class="text-white text-2xl font-black leading-tight uppercase tracking-tighter">Angel Sebastián Rodas</h1>
+                <p class="text-blue-400 font-bold text-xs mt-2 uppercase tracking-[0.2em]">Backend Software Engineer</p>
             </div>
-            <div class="flex flex-col gap-2 no-print">
-                <a href="https://github.com/Sebas16608" target="_blank" class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm flex items-center gap-2 border border-slate-700 transition-all">
-                    <span>GitHub: Sebas16608</span>
-                </a>
-                <a href="https://invorax.vercel.app/" target="_blank" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all text-center">
-                    <span>Invorax Live Demo 🚀</span>
-                </a>
-            </div>
-        </header>
 
-        <div class="flex flex-col md:flex-row">
-            
-            <!-- Columna Lateral -->
-            <aside class="w-full md:w-80 bg-slate-50 p-8 border-r border-slate-200">
-                
-                <section class="mb-10">
-                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Hard Skills</h3>
+            <div class="space-y-10">
+                <!-- Stack Tecnológico -->
+                <section>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4 opacity-50">Core Stack</h3>
                     <div class="space-y-4">
                         <div>
-                            <p class="text-[11px] font-bold text-slate-500 mb-2">LENGUAJES</p>
+                            <p class="text-[10px] font-bold text-blue-400 mb-2">LENGUAJES & RUNTIMES</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">Python</span>
-                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">TypeScript</span>
-                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
-                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">SQL</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Python 3.x</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Node.js</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">TypeScript</span>
                             </div>
                         </div>
                         <div>
-                            <p class="text-[11px] font-bold text-slate-500 mb-2">FRAMEWORKS</p>
+                            <p class="text-[10px] font-bold text-blue-400 mb-2">FRAMEWORKS & APIS</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">Django / DRF</span>
-                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">Express.js</span>
-                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">Flask</span>
-                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">FastAPI</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Django / DRF</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">FastAPI</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Express.js</span>
                             </div>
                         </div>
                         <div>
-                            <p class="text-[11px] font-bold text-slate-500 mb-2">INFRAESTRUCTURA</p>
+                            <p class="text-[10px] font-bold text-blue-400 mb-2">PERSISTENCIA & INFRA</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">PostgreSQL</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Docker</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Linux VPS</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Nginx</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Git / GitHub</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">PostgreSQL</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Docker</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Redis</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px]">Linux (Ubuntu)</span>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="mb-10">
-                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Metodologías</h3>
-                    <ul class="text-sm text-slate-600 space-y-2">
-                        <li>• Clean Code / SOLID</li>
-                        <li>• MVC Architecture</li>
-                        <li>• Scrum / Agile</li>
-                        <li>• RESTful API Design</li>
-                        <li>• Multi-tenant Systems</li>
-                    </ul>
-                </section>
-
-                <section class="mb-10">
-                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Educación</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <p class="text-xs font-bold text-slate-900 uppercase">Ingeniería en Sistemas</p>
-                            <p class="text-xs text-slate-600">Univ. Mariano Gálvez</p>
-                            <p class="text-[10px] text-blue-600 font-bold uppercase mt-1">Feb 2026 - Presente</p>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-900 uppercase">Bachiller en Computación</p>
-                            <p class="text-xs text-slate-600 leading-tight">Liceo en Ciencia y Tecnología de Occidente "Las Aguilas"</p>
-                        </div>
-                    </div>
-                </section>
-
+                <!-- Educación -->
                 <section>
-                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Idiomas</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
-                        <li>• Español (Nativo)</li>
-                        <li>• Inglés (Técnico)</li>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4 opacity-50">Formación Académica</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-blue-500 pl-4">
+                            <p class="text-xs font-bold text-white uppercase">Ingeniería en Sistemas</p>
+                            <p class="text-[11px]">Univ. Mariano Gálvez</p>
+                            <p class="text-[10px] text-blue-400 font-bold mt-1">2026 - PRESENTE</p>
+                        </div>
+                        <div class="border-l-2 border-slate-700 pl-4">
+                            <p class="text-xs font-bold text-white uppercase">Bachillerato en Computación</p>
+                            <p class="text-[11px] leading-tight italic">Liceo en Ciencia y Tecnología de Occidente</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Metodologías -->
+                <section>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4 opacity-50">Engineering Principles</h3>
+                    <ul class="text-[11px] space-y-2 font-medium">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> SOLID / Clean Code</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> RESTful Architecture</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Database Normalization</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> GitFlow Workflow</li>
                     </ul>
                 </section>
+            </div>
+        </aside>
 
-            </aside>
+        <!-- Contenido Principal -->
+        <main class="flex-grow p-8 md:p-12 bg-white">
+            
+            <!-- Resumen de Impacto -->
+            <section class="mb-14">
+                <h2 class="section-title">Professional Profile</h2>
+                <p class="text-slate-700 leading-relaxed text-sm font-medium">
+                    Desarrollador Backend con alta capacidad analítica y **4 años de trayectoria docente**, especializado en la construcción de arquitecturas de software robustas. Experto en el desarrollo de **APIs transaccionales críticas**, sistemas multi-tenant y soluciones de automatización de procesos industriales. Mi enfoque se centra en la optimización del rendimiento del servidor, la integridad de los datos en bases de datos relacionales y la entrega de software escalable bajo estándares de ingeniería modernos.
+                </p>
+            </section>
 
-            <!-- Contenido Principal -->
-            <main class="flex-grow p-10">
+            <!-- Experiencia Técnica -->
+            <section class="mb-14">
+                <h2 class="section-title">Technical Experience</h2>
                 
-                <section class="mb-12">
-                    <h2 class="section-title">Resumen Profesional</h2>
-                    <p class="text-slate-600 leading-relaxed text-justify">
-                        Ingeniero de Software con sólida base técnica y **4 años de experiencia docente**. Especialista en el ecosistema **Python y TypeScript**, con un enfoque marcado en el desarrollo de soluciones de automatización industrial y sistemas bancarios críticos. Fundador de **Invorax**, un SaaS productivo que optimiza procesos en el sector de salud veterinaria. Experto en transformar necesidades de negocio complejas en arquitecturas escalables y seguras.
-                    </p>
-                </section>
-
-                <section class="mb-12">
-                    <h2 class="section-title">Experiencia Laboral</h2>
-                    
-                    <div class="space-y-10">
-                        <!-- DOCENTE -->
-                        <div class="relative">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="text-lg font-bold text-slate-900 leading-none uppercase">Maestro de Computación & TI</h4>
-                                    <p class="text-blue-600 font-bold text-sm mt-1">COLEGIO MIXTO "NUESTRA SEÑORA DEL PILAR"</p>
-                                </div>
-                                <span class="text-[11px] font-bold bg-slate-100 px-2 py-1 rounded text-slate-500 italic">2022 — 2026 (4 AÑOS)</span>
-                            </div>
-                            <ul class="text-sm text-slate-600 mt-3 space-y-2 list-disc list-inside">
-                                <li>Instrucción técnica avanzada para estudiantes en lógica de programación y mantenimiento de sistemas.</li>
-                                <li>Liderazgo en la modernización de los planes de estudio de informática del establecimiento.</li>
-                                <li>Gestión de infraestructura tecnológica y soporte técnico de alto nivel.</li>
-                            </ul>
+                <div class="space-y-12">
+                    <!-- COOPESOL -->
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-lg font-extrabold text-slate-900 uppercase tracking-tight">Backend Developer (Core Bancario)</h3>
+                            <span class="text-[10px] font-black text-blue-600 bg-blue-50 px-2 py-1 rounded">AGO 2025 — OCT 2025</span>
                         </div>
+                        <p class="text-blue-700 text-xs font-black uppercase tracking-widest mt-1">COOPERATIVA COOPESOL | FINTECH</p>
+                        <ul class="text-[13px] text-slate-600 mt-4 space-y-2 leading-relaxed">
+                            <li class="flex gap-2"><span>▹</span> <span>Diseño e implementación de lógica transaccional para el **Core Bancario** utilizando Django REST Framework.</span></li>
+                            <li class="flex gap-2"><span>▹</span> <span>Arquitectura de esquemas de datos complejos en **PostgreSQL**, garantizando la atomicidad y consistencia de las operaciones financieras de los socios.</span></li>
+                            <li class="flex gap-2"><span>▹</span> <span>Desarrollo de capas de seguridad para la validación y saneamiento de entradas en endpoints críticos.</span></li>
+                        </ul>
+                    </div>
 
-                        <!-- COOPESOL -->
-                        <div class="relative">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="text-lg font-bold text-slate-900 leading-none uppercase">Backend Engineer (Fintech)</h4>
-                                    <p class="text-blue-600 font-bold text-sm mt-1">COOPERATIVA COOPESOL</p>
-                                </div>
-                                <span class="text-[11px] font-bold bg-slate-100 px-2 py-1 rounded text-slate-500 italic">AGO 2025 — OCT 2025</span>
-                            </div>
-                            <ul class="text-sm text-slate-600 mt-3 space-y-2 list-disc list-inside">
-                                <li>Desarrollo de lógica para **Sistema Bancario Core**, manejando flujos transaccionales y seguridad de datos.</li>
-                                <li>Optimización de consultas en PostgreSQL para garantizar la integridad financiera de los socios.</li>
-                            </ul>
+                    <!-- DOCENTE -->
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-lg font-extrabold text-slate-900 uppercase tracking-tight">Instructor de TI & Lógica de Programación</h3>
+                            <span class="text-[10px] font-black text-slate-500 bg-slate-100 px-2 py-1 rounded">2022 — 2026 (4 AÑOS)</span>
+                        </div>
+                        <p class="text-slate-500 text-xs font-black uppercase tracking-widest mt-1">COLEGIO MIXTO "NUESTRA SEÑORA DEL PILAR"</p>
+                        <ul class="text-[13px] text-slate-600 mt-4 space-y-2">
+                            <li class="flex gap-2"><span>▹</span> <span>Liderazgo técnico en la formación de bases algorítmicas, estructuras de datos y administración de sistemas.</span></li>
+                            <li class="flex gap-2"><span>▹</span> <span>Gestión de infraestructura de red y despliegue de soluciones internas para el establecimiento educativo.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Proyectos de Ingeniería -->
+            <section class="mb-14">
+                <h2 class="section-title">Engineering Projects & SaaS</h2>
+                
+                <div class="space-y-6">
+                    <!-- INVORAX -->
+                    <div class="p-6 border border-slate-200 rounded-2xl bg-slate-50 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-[9px] font-black px-4 py-1 uppercase tracking-tighter">SaaS Architecture</div>
+                        <h4 class="text-xl font-black text-slate-900">INVORAX | Enterprise Resource Planning (ERP)</h4>
+                        <p class="text-blue-600 text-[10px] font-bold mt-1 uppercase tracking-widest">Multi-tenant Architecture | Django | PostgreSQL</p>
+                        <p class="text-[13px] text-slate-600 mt-4 font-medium leading-relaxed">
+                            Diseño de un sistema **SaaS Multi-tenant** para el sector salud. Implementación de aislamiento de datos a nivel de base de datos, lógica de control de inventarios críticos (lotes/vencimientos) y automatización de reportes analíticos.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="tech-pill">Multi-tenancy</span>
+                            <span class="tech-pill">ORM Optimization</span>
+                            <span class="tech-pill">Batch Processing</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-600 text-xs font-bold underline">🌐 Producción: invorax.vercel.app</a>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase">Implementado en: Grupo Mallo & Comayma</p>
                         </div>
                     </div>
-                </section>
 
-                <section class="mb-12">
-                    <h2 class="section-title">Automatización & Proyectos Industriales</h2>
-                    
-                    <div class="space-y-6">
-                        <!-- GRUPO MALLO -->
-                        <div class="p-5 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-                            <div class="flex justify-between items-center mb-2">
-                                <h4 class="font-bold text-slate-900">Grupo Mallo (Sector Veterinario)</h4>
-                                <span class="text-[10px] font-bold text-blue-700 uppercase">Automatización vía Invorax</span>
-                            </div>
-                            <p class="text-sm text-slate-600">Implementación de flujos de automatización de inventario y distribución de productos veterinarios mediante la integración de Invorax, reduciendo tiempos operativos en un 40%.</p>
-                        </div>
-
-                        <!-- COMAYMA -->
-                        <div class="p-5 bg-slate-50 rounded-lg border-l-4 border-slate-800">
-                            <div class="flex justify-between items-center mb-2">
-                                <h4 class="font-bold text-slate-900">Comayma Guatemala</h4>
-                                <span class="text-[10px] font-bold text-slate-500 uppercase">Sistema Interno</span>
-                            </div>
-                            <p class="text-sm text-slate-600">Desarrollo de software interno para la automatización de procesos administrativos y logísticos, optimizando la gestión de datos críticos de la empresa.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="mb-12">
-                    <h2 class="section-title">SaaS & Desarrollo Open Source</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- INVORAX -->
-                        <div class="md:col-span-2 p-6 bg-slate-900 text-white rounded-xl relative">
-                            <h4 class="text-xl font-extrabold">Invorax | ERP SaaS Multi-tenant</h4>
-                            <p class="text-blue-400 text-xs font-bold mb-3 uppercase tracking-widest">Django & PostgreSQL | Producción</p>
-                            <p class="text-sm text-slate-300 mb-4">Sistema de gestión para farmacias y veterinarias con control de lotes y alertas de caducidad automáticas.</p>
-                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-bold underline italic">Demo: invorax.vercel.app</a>
-                        </div>
-
+                    <!-- GRID PROYECTOS -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <!-- GRANJA -->
-                        <div class="p-4 border border-slate-200 rounded-lg">
-                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">Control Porcino</h5>
-                            <p class="text-[11px] text-slate-500 mb-2 font-bold italic">Automatización Agrícola</p>
-                            <p class="text-xs text-slate-600 leading-relaxed">Backend especializado para el control operativo, alimentación y bioseguridad en granja.</p>
-                        </div>
-
-                        <!-- NOTITAS -->
-                        <div class="p-4 border border-slate-200 rounded-lg">
-                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">Notitas App</h5>
-                            <p class="text-[11px] text-pink-500 mb-2 font-bold italic">TypeScript & Socket.io</p>
-                            <p class="text-xs text-slate-600 leading-relaxed">App de mensajería interactiva personal con sincronización instantánea.</p>
-                        </div>
-
-                        <!-- NO MAS PAN -->
-                        <div class="p-4 border border-slate-200 rounded-lg">
-                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">No Más Pan</h5>
-                            <p class="text-[11px] text-orange-600 mb-2 font-bold italic">Nutrición & Health-Tech</p>
-                            <p class="text-xs text-slate-600 leading-relaxed">Contador de calorías simplificado en desarrollo activo.</p>
+                        <div class="p-5 border border-slate-100 rounded-xl bg-white shadow-sm">
+                            <h5 class="font-black text-slate-900 text-xs uppercase mb-2">Automatización de Bio-seguridad</h5>
+                            <p class="text-[12px] text-slate-600">Desarrollo de un sistema de trazabilidad operativa para granjas porcinas, automatizando el registro de alimentación y salud preventiva.</p>
+                            <div class="mt-3 flex gap-2"><span class="tech-pill">Python</span><span class="tech-pill">Industrial Tech</span></div>
                         </div>
 
                         <!-- COLEGIO -->
-                        <div class="p-4 border border-slate-200 rounded-lg">
-                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">Colegio App (SGA)</h5>
-                            <p class="text-[11px] text-blue-600 mb-2 font-bold italic">Gestión Académica</p>
-                            <p class="text-xs text-slate-600 leading-relaxed">Sistema de gestión administrativa y control de notas escolares.</p>
+                        <div class="p-5 border border-slate-100 rounded-xl bg-white shadow-sm">
+                            <h5 class="font-black text-slate-900 text-xs uppercase mb-2">Academic Management System</h5>
+                            <p class="text-[12px] text-slate-600">SGA para el control de expedientes académicos, cálculos automáticos de promedios y reportes de asistencia masivos.</p>
+                            <div class="mt-3 flex gap-2"><span class="tech-pill">Backend Logic</span><span class="tech-pill">CRUD Architecture</span></div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-            </main>
-        </div>
+            <!-- Links de Ingeniería -->
+            <section class="no-print">
+                <h2 class="section-title">Repositories & Development</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="https://github.com/Sebas16608/Notitas" target="_blank" class="p-3 border border-slate-200 rounded-lg text-center hover:bg-slate-50 transition-colors">
+                        <p class="text-[10px] font-black uppercase">Notitas (RT)</p>
+                        <span class="text-[9px] text-blue-600 font-bold">Socket.io/TS</span>
+                    </a>
+                    <a href="https://github.com/Sebas16608/no-mas-pan" target="_blank" class="p-3 border border-slate-200 rounded-lg text-center hover:bg-slate-50 transition-colors">
+                        <p class="text-[10px] font-black uppercase">Nutrition API</p>
+                        <span class="text-[9px] text-blue-600 font-bold">FastAPI</span>
+                    </a>
+                    <a href="https://github.com/Sebas16608" target="_blank" class="p-3 border border-slate-200 rounded-lg text-center bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                        <p class="text-[10px] font-black uppercase">Full Portfolio</p>
+                        <span class="text-[9px] text-blue-400 font-bold">GitHub</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
     </div>
 
-    <!-- Botón para imprimir -->
+    <!-- Controles -->
     <div class="max-w-5xl mx-auto mt-8 text-center no-print pb-12">
-        <button onclick="window.print()" class="bg-slate-900 hover:bg-black text-white font-bold py-4 px-12 rounded-full shadow-2xl transition-all transform hover:scale-105 active:scale-95">
-            🖨️ Generar PDF Actualizado
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-xl shadow-xl transition-all transform hover:-translate-y-1 active:scale-95">
+            🖨️ Exportar CV para Reclutamiento (PDF)
         </button>
     </div>
 

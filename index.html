@@ -1,516 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Angel Sebastián Rodas Rodriguez | Backend Developer</title>
-<style>
-:root {
-  --primary: #2c3e50;
-  --secondary: #3498db;
-  --accent: #e74c3c;
-  --light: #ecf0f1;
-  --dark: #2c3e50;
-  --gray: #7f8c8d;
-}
-
-@page {
-  size: A4;
-  margin: 0.5cm;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.5;
-  color: #333;
-  background: #f5f5f5;
-  padding: 15px;
-  font-size: 14px;
-}
-
-.cv-wrapper {
-  max-width: 210mm;
-  min-height: 297mm;
-  margin: 0 auto;
-  background: white;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-}
-
-/* ===== HEADER ===== */
-.cv-header {
-  background: var(--primary);
-  color: white;
-  padding: 30px 40px;
-  border-bottom: 4px solid var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.cv-header img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent);
-}
-
-.cv-header h1 {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-
-.cv-header .title {
-  font-size: 18px;
-  font-weight: 300;
-  color: #ecf0f1;
-  margin-bottom: 15px;
-}
-
-.contact-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  font-size: 13px;
-  color: #bdc3c7;
-}
-
-.contact-bar a {
-  color: #ecf0f1;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.contact-bar a:hover {
-  color: var(--secondary);
-}
-
-/* ===== 2-COLUMN LAYOUT ===== */
-.cv-main {
-  display: flex;
-  flex: 1;
-}
-
-/* LEFT COLUMN (30%) */
-.cv-sidebar {
-  width: 30%;
-  background: #f9f9f9;
-  padding: 30px 25px;
-  border-right: 2px solid #eee;
-}
-
-/* RIGHT COLUMN (70%) */
-.cv-content {
-  width: 70%;
-  padding: 30px 35px;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  margin-bottom: 30px;
-}
-
-.section-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--secondary);
-  letter-spacing: 1px;
-}
-
-/* Skills boxes */
-.skill-category {
-  margin-bottom: 20px;
-}
-
-.skill-category h4 {
-  font-size: 13px;
-  color: var(--dark);
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tag {
-  background: var(--secondary);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-/* Education */
-.education-item {
-  margin-bottom: 20px;
-  padding-left: 15px;
-  border-left: 2px solid #ddd;
-}
-
-.education-item h4 {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 3px;
-}
-
-.education-meta {
-  font-size: 12px;
-  color: var(--gray);
-  margin-bottom: 5px;
-}
-
-/* Experience */
-.experience-item {
-  margin-bottom: 25px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-left: 4px solid var(--secondary);
-}
-
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-
-.experience-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.experience-company {
-  font-size: 14px;
-  color: var(--secondary);
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.experience-date {
-  background: var(--primary);
-  color: white;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.experience-list {
-  list-style: none;
-}
-
-.experience-list li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 8px;
-  font-size: 13px;
-  color: #555;
-}
-
-.experience-list li:before {
-  content: "▶";
-  position: absolute;
-  left: 0;
-  color: var(--secondary);
-  font-size: 10px;
-}
-
-/* ===== PRINT PDF ===== */
-@media print {
-  body {
-    background: white;
-    padding: 0;
-    font-size: 12pt;
-  }
-  
-  .cv-wrapper {
-    max-width: 100%;
-    min-height: auto;
-    box-shadow: none;
-    margin: 0;
-  }
-  
-  .cv-header {
-    padding: 20px 30px;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  
-  .cv-header h1 {
-    font-size: 24pt;
-  }
-  
-  .cv-sidebar, .cv-content {
-    padding: 20px 25px;
-  }
-  
-  .section {
-    margin-bottom: 20px;
-  }
-  
-  .section-title {
-    font-size: 14pt;
-  }
-
-  .cv-header a {
-    color: #ffffff !important;
-    text-decoration: none;
-  }
-  
-  .no-print {
-    display: none;
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .cv-main {
-    flex-direction: column;
-  }
-  
-  .cv-sidebar, .cv-content {
-    width: 100%;
-  }
-  
-  .cv-sidebar {
-    border-right: none;
-    border-bottom: 2px solid #eee;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Angel Sebastián Rodas Rodriguez | Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; padding: 0; }
+            .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(to right, #2563eb, transparent);
+        }
+    </style>
 </head>
-<body>
+<body class="p-4 md:p-8">
 
-<div class="cv-wrapper">
-  
-  <!-- HEADER -->
-  <header class="cv-header">
-    <img src="imagen.png" alt="Angel Sebastian Rodas Rodriguez">
-    <div>
-      <h1>Angel Sebastián Rodas Rodriguez</h1>
-      <div class="title">Backend Developer | Python & TypeScript Specialist</div>
-      <div class="contact-bar">
-        <a href="mailto:asebasrr444@gmail.com">📧 asebasrr444@gmail.com</a>
-        <a href="tel:+50239085258">📱 +502 3908 5258</a>
-        <a href="https://github.com/Sebas16608" target="_blank">💻 github.com/Sebas16608</a>
-        <a href="https://sebastian-portfolio-one.vercel.app/" target="_blank">🌐 Portfolio</a>
-        <span>📍 Guatemala, Chimaltenango</span>
-      </div>
+    <div class="cv-container max-w-5xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden min-h-[1500px]">
+        
+        <!-- Header Principal -->
+        <header class="bg-slate-900 text-white p-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-8">
+                <div class="w-32 h-32 rounded-full border-4 border-blue-500 overflow-hidden shadow-2xl shrink-0">
+                    <!-- Usando la foto proporcionada -->
+                    <img src="imagen.png" alt="Angel Sebastián" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h1 class="text-4xl font-extrabold tracking-tight">Angel Sebastián Rodas</h1>
+                    <p class="text-blue-400 text-xl font-medium mt-1 uppercase tracking-widest">Backend Engineer & Software Architect</p>
+                    <div class="flex flex-wrap gap-4 mt-4 text-sm text-slate-300">
+                        <span>📍 Chimaltenango, Guatemala</span>
+                        <span>📧 asebasrr444@gmail.com</span>
+                        <span>📱 +502 3908 5258</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 no-print">
+                <a href="https://github.com/Sebas16608" target="_blank" class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm flex items-center gap-2 border border-slate-700 transition-all">
+                    <span>GitHub: Sebas16608</span>
+                </a>
+                <a href="https://invorax.vercel.app/" target="_blank" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-all text-center">
+                    <span>Invorax Live Demo 🚀</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="flex flex-col md:flex-row">
+            
+            <!-- Columna Lateral -->
+            <aside class="w-full md:w-80 bg-slate-50 p-8 border-r border-slate-200">
+                
+                <section class="mb-10">
+                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Hard Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[11px] font-bold text-slate-500 mb-2">LENGUAJES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">Python</span>
+                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">TypeScript</span>
+                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+                                <span class="bg-white border border-slate-300 px-2 py-1 rounded text-xs font-semibold">SQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-slate-500 mb-2">FRAMEWORKS</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">Django / DRF</span>
+                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">Express.js</span>
+                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">Flask</span>
+                                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded text-xs font-semibold">FastAPI</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-slate-500 mb-2">INFRAESTRUCTURA</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">PostgreSQL</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Docker</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Linux VPS</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Nginx</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-xs font-semibold">Git / GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-10">
+                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Metodologías</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• Clean Code / SOLID</li>
+                        <li>• MVC Architecture</li>
+                        <li>• Scrum / Agile</li>
+                        <li>• RESTful API Design</li>
+                        <li>• Multi-tenant Systems</li>
+                    </ul>
+                </section>
+
+                <section class="mb-10">
+                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Educación</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-xs font-bold text-slate-900 uppercase">Ingeniería en Sistemas</p>
+                            <p class="text-xs text-slate-600">Univ. Mariano Gálvez</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase mt-1">Feb 2026 - Presente</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-900 uppercase">Bachiller en Computación</p>
+                            <p class="text-xs text-slate-600 leading-tight">Liceo en Ciencia y Tecnología de Occidente "Las Aguilas"</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-slate-900 font-bold text-xs uppercase tracking-widest mb-4">Idiomas</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Español (Nativo)</li>
+                        <li>• Inglés (Técnico)</li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <!-- Contenido Principal -->
+            <main class="flex-grow p-10">
+                
+                <section class="mb-12">
+                    <h2 class="section-title">Resumen Profesional</h2>
+                    <p class="text-slate-600 leading-relaxed text-justify">
+                        Ingeniero de Software con sólida base técnica y **4 años de experiencia docente**. Especialista en el ecosistema **Python y TypeScript**, con un enfoque marcado en el desarrollo de soluciones de automatización industrial y sistemas bancarios críticos. Fundador de **Invorax**, un SaaS productivo que optimiza procesos en el sector de salud veterinaria. Experto en transformar necesidades de negocio complejas en arquitecturas escalables y seguras.
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="section-title">Experiencia Laboral</h2>
+                    
+                    <div class="space-y-10">
+                        <!-- DOCENTE -->
+                        <div class="relative">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 leading-none uppercase">Maestro de Computación & TI</h4>
+                                    <p class="text-blue-600 font-bold text-sm mt-1">COLEGIO MIXTO "NUESTRA SEÑORA DEL PILAR"</p>
+                                </div>
+                                <span class="text-[11px] font-bold bg-slate-100 px-2 py-1 rounded text-slate-500 italic">2022 — 2026 (4 AÑOS)</span>
+                            </div>
+                            <ul class="text-sm text-slate-600 mt-3 space-y-2 list-disc list-inside">
+                                <li>Instrucción técnica avanzada para estudiantes en lógica de programación y mantenimiento de sistemas.</li>
+                                <li>Liderazgo en la modernización de los planes de estudio de informática del establecimiento.</li>
+                                <li>Gestión de infraestructura tecnológica y soporte técnico de alto nivel.</li>
+                            </ul>
+                        </div>
+
+                        <!-- COOPESOL -->
+                        <div class="relative">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 leading-none uppercase">Backend Engineer (Fintech)</h4>
+                                    <p class="text-blue-600 font-bold text-sm mt-1">COOPERATIVA COOPESOL</p>
+                                </div>
+                                <span class="text-[11px] font-bold bg-slate-100 px-2 py-1 rounded text-slate-500 italic">AGO 2025 — OCT 2025</span>
+                            </div>
+                            <ul class="text-sm text-slate-600 mt-3 space-y-2 list-disc list-inside">
+                                <li>Desarrollo de lógica para **Sistema Bancario Core**, manejando flujos transaccionales y seguridad de datos.</li>
+                                <li>Optimización de consultas en PostgreSQL para garantizar la integridad financiera de los socios.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="section-title">Automatización & Proyectos Industriales</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- GRUPO MALLO -->
+                        <div class="p-5 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-bold text-slate-900">Grupo Mallo (Sector Veterinario)</h4>
+                                <span class="text-[10px] font-bold text-blue-700 uppercase">Automatización vía Invorax</span>
+                            </div>
+                            <p class="text-sm text-slate-600">Implementación de flujos de automatización de inventario y distribución de productos veterinarios mediante la integración de Invorax, reduciendo tiempos operativos en un 40%.</p>
+                        </div>
+
+                        <!-- COMAYMA -->
+                        <div class="p-5 bg-slate-50 rounded-lg border-l-4 border-slate-800">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-bold text-slate-900">Comayma Guatemala</h4>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase">Sistema Interno</span>
+                            </div>
+                            <p class="text-sm text-slate-600">Desarrollo de software interno para la automatización de procesos administrativos y logísticos, optimizando la gestión de datos críticos de la empresa.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="section-title">SaaS & Desarrollo Open Source</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- INVORAX -->
+                        <div class="md:col-span-2 p-6 bg-slate-900 text-white rounded-xl relative">
+                            <h4 class="text-xl font-extrabold">Invorax | ERP SaaS Multi-tenant</h4>
+                            <p class="text-blue-400 text-xs font-bold mb-3 uppercase tracking-widest">Django & PostgreSQL | Producción</p>
+                            <p class="text-sm text-slate-300 mb-4">Sistema de gestión para farmacias y veterinarias con control de lotes y alertas de caducidad automáticas.</p>
+                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-bold underline italic">Demo: invorax.vercel.app</a>
+                        </div>
+
+                        <!-- GRANJA -->
+                        <div class="p-4 border border-slate-200 rounded-lg">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">Control Porcino</h5>
+                            <p class="text-[11px] text-slate-500 mb-2 font-bold italic">Automatización Agrícola</p>
+                            <p class="text-xs text-slate-600 leading-relaxed">Backend especializado para el control operativo, alimentación y bioseguridad en granja.</p>
+                        </div>
+
+                        <!-- NOTITAS -->
+                        <div class="p-4 border border-slate-200 rounded-lg">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">Notitas App</h5>
+                            <p class="text-[11px] text-pink-500 mb-2 font-bold italic">TypeScript & Socket.io</p>
+                            <p class="text-xs text-slate-600 leading-relaxed">App de mensajería interactiva personal con sincronización instantánea.</p>
+                        </div>
+
+                        <!-- NO MAS PAN -->
+                        <div class="p-4 border border-slate-200 rounded-lg">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">No Más Pan</h5>
+                            <p class="text-[11px] text-orange-600 mb-2 font-bold italic">Nutrición & Health-Tech</p>
+                            <p class="text-xs text-slate-600 leading-relaxed">Contador de calorías simplificado en desarrollo activo.</p>
+                        </div>
+
+                        <!-- COLEGIO -->
+                        <div class="p-4 border border-slate-200 rounded-lg">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 uppercase">Colegio App (SGA)</h5>
+                            <p class="text-[11px] text-blue-600 mb-2 font-bold italic">Gestión Académica</p>
+                            <p class="text-xs text-slate-600 leading-relaxed">Sistema de gestión administrativa y control de notas escolares.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
     </div>
-  </header>
-  
-  <div class="cv-main">
-    
-    <!-- LEFT COLUMN -->
-    <aside class="cv-sidebar">
-      
-      <!-- PROFESSIONAL PROFILE -->
-      <section class="section">
-        <h3 class="section-title">Professional Profile</h3>
-        <p style="font-size: 13px; color: #555; line-height: 1.6;">
-          Backend Developer specialized in Python (Django, Flask) and TypeScript/Node.js. 
-          I build robust REST APIs and scalable systems. Self-taught developer with 
-          production experience in real projects, currently working on a SaaS inventory platform (Invorax).
-        </p>
-      </section>
-      
-      <!-- TECHNICAL SKILLS -->
-      <section class="section">
-        <h3 class="section-title">Technical Skills</h3>
-        
-        <div class="skill-category">
-          <h4>Backend & APIs</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Django</span>
-            <span class="skill-tag">Django REST</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">REST APIs</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h4>Programming Languages</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">SQL</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h4>Databases</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">SQLite</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h4>DevOps & Tools</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-          </div>
-        </div>
-      </section>
-      
-      <!-- EDUCATION -->
-      <section class="section">
-        <h3 class="section-title">Education</h3>
-        
-        <div class="education-item">
-          <h4>Systems Engineering</h4>
-          <div class="education-meta">Mariano Gálvez University, Guatemala</div>
-          <div class="education-meta">2026 - Present (First year)</div>
-        </div>
-        
-        <div class="education-item">
-          <h4>Self-Taught Developer</h4>
-          <div class="education-meta">Backend Specialization</div>
-          <div class="education-meta">2024 - Present</div>
-        </div>
-      </section>
-      
-      <!-- LANGUAGES -->
-      <section class="section">
-        <h3 class="section-title">Languages</h3>
-        <p style="font-size: 13px; color: #555;">
-          <strong>Spanish:</strong> Native<br>
-          <strong>English:</strong> Intermediate - Fluent reading comprehension, conversational speaking, comfortable with technical documentation
-        </p>
-      </section>
-      
-    </aside>
-    
-    <!-- RIGHT COLUMN -->
-    <main class="cv-content">
-      
-      <!-- PROFESSIONAL EXPERIENCE -->
-      <section class="section">
-        <h3 class="section-title">Professional Experience</h3>
-        
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <h4 class="experience-title">Backend Developer</h4>
-              <div class="experience-company">Coopesol Cooperative | Banking System</div>
-            </div>
-            <div class="experience-date">Jan 2025 - Feb 2025</div>
-          </div>
-          <ul class="experience-list">
-            <li>Developed complete banking system with Django in 2 months</li>
-            <li>REST API with JWT authentication and role-based permissions</li>
-            <li>PostgreSQL database design for financial transactions</li>
-            <li>Python scripts for massive data processing automation</li>
-          </ul>
-        </div>
-        
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <h4 class="experience-title">Backend Developer & SaaS Creator</h4>
-              <div class="experience-company">Invorax | Inventory Management SaaS</div>
-            </div>
-            <div class="experience-date">Mar 2025 - Present</div>
-          </div>
-          <ul class="experience-list">
-            <li>Django REST backend for cloud-based inventory management</li>
-            <li>Real-time order tracking, stock updates, and automated notifications</li>
-            <li>Payment gateway integration (Stripe/PayPal) for client subscriptions</li>
-            <li>Dockerized deployment on Linux server ensuring scalable and reliable operations</li>
-            <li>User roles, permissions, and multi-client management implemented</li>
-          </ul>
-        </div>
-        
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <h4 class="experience-title">Freelance Backend Developer</h4>
-              <div class="experience-company">Independent Projects</div>
-            </div>
-            <div class="experience-date">2024 - Present</div>
-          </div>
-          <ul class="experience-list">
-            <li>Node.js + TypeScript microservices for specific processing</li>
-            <li>Django/Flask APIs for various business cases</li>
-            <li>Application dockerization for consistent deployment</li>
-            <li>Remote collaboration with international clients</li>
-          </ul>
-        </div>
-        
-      </section>
-      
-      <!-- KEY PROJECTS -->
-      <section class="section">
-        <h3 class="section-title">Key Projects</h3>
-        
-        <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">School Platform</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">REST API</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
-          </div>
-          <p style="font-size: 13px; color: #555;">
-            Platform for school management including student records, grades, and communication between teachers and parents.
-          </p>
-        </div>
-        
-        <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">Invorax | Inventory Management SaaS</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django REST</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Docker</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">PostgreSQL</span>
-          </div>
-          <p style="font-size: 13px; color: #555;">
-            Real-time inventory management SaaS for businesses with stock tracking, automated notifications, order processing, and multi-client support.
-          </p>
-        </div>
-        
-        <div class="experience-item">
-          <h4 class="experience-title" style="margin-bottom: 10px;">E-commerce Platform</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Django</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">Stripe/PayPal</span>
-            <span style="background: #e8f4fc; color: #3498db; padding: 3px 8px; border-radius: 10px; font-size: 11px;">REST API</span>
-          </div>
-          <p style="font-size: 13px; color: #555;">
-            Full-featured e-commerce platform with product catalog, shopping cart, payment gateway, and order management.
-          </p>
-        </div>
-        
-      </section>
-      
-    </main>
-</div>
+
+    <!-- Botón para imprimir -->
+    <div class="max-w-5xl mx-auto mt-8 text-center no-print pb-12">
+        <button onclick="window.print()" class="bg-slate-900 hover:bg-black text-white font-bold py-4 px-12 rounded-full shadow-2xl transition-all transform hover:scale-105 active:scale-95">
+            🖨️ Generar PDF Actualizado
+        </button>
+    </div>
 
 </body>
 </html>

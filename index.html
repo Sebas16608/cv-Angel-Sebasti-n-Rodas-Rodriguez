@@ -9,6 +9,222 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; color: #0f172a; }
+        @media print { .no-print { display: none; } body { background-color: white; padding: 0; } .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; border: none; } }
+        .section-title { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #1e40af; margin-bottom: 1.25rem; font-size: 0.75rem; }
+        .section-title::after { content: ""; height: 1px; flex-grow: 1; background: #e2e8f0; }
+        .tech-pill { background-color: #eff6ff; border: 1px solid #dbeafe; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; color: #1e40af; text-transform: uppercase; }
+        .work-card { border-left: 3px solid #cbd5e1; transition: border-color 0.3s; }
+        .work-card:hover { border-left-color: #2563eb; }
+    </style>
+</head>
+<body class="p-4 md:p-6 lg:p-10">
+
+    <div class="cv-container max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden min-h-[1500px] flex flex-col md:flex-row border border-slate-100">
+        
+        <!-- Sidebar Izquierda: Enfoque Técnico -->
+        <aside class="w-full md:w-80 bg-[#0f172a] text-slate-400 p-8 flex flex-col">
+            <div class="text-center mb-10">
+                <div class="w-40 h-40 rounded-3xl border-2 border-blue-500/30 overflow-hidden shadow-2xl mx-auto mb-6 transform hover:scale-105 transition-all duration-300">
+                    <img src="imagen.png" alt="Angel Sebastián" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-white text-2xl font-black leading-tight uppercase tracking-tight">Angel Sebastián Rodas</h1>
+                <p class="text-blue-400 font-bold text-[10px] mt-3 uppercase tracking-[0.25em] border-y border-white/10 py-2">Backend Engineer | AI Integrator</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Stack de Ingeniería -->
+                <section>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Core Infrastructure</h3>
+                    <div class="space-y-5">
+                        <div>
+                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">LANGUAGES & AI</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">Python (Expert)</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">TypeScript</span>
+                                <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded text-[10px] font-bold border border-blue-500/30">Gemini/OpenAI API</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">BACKEND FRAMEWORKS</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">Django / DRF</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">FastAPI</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">Express.js</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">DATABASE & OPS</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">PostgreSQL</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">Redis</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">Docker</span>
+                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold tracking-tight">Nginx</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Principios de Ingeniería -->
+                <section>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Engineering Method</h3>
+                    <ul class="text-[11px] space-y-3 font-medium text-slate-300">
+                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Arquitectura de Micro-servicios</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Patrones de Diseño (SOLID)</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Autenticación JWT / OAuth2</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Optimización de Consultas SQL</li>
+                    </ul>
+                </section>
+
+                <!-- Educación -->
+                <section>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Academic Path</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/40 p-3 rounded-lg border border-white/5">
+                            <p class="text-[10px] font-black text-white uppercase mb-1">Ingeniería en Sistemas</p>
+                            <p class="text-[10px] text-slate-400">Univ. Mariano Gálvez</p>
+                            <p class="text-[9px] text-blue-400 font-bold mt-2 uppercase">2026 — Presente</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal: Enfoque de Negocio y Soluciones -->
+        <main class="flex-grow p-8 md:p-12 bg-white">
+            
+            <!-- Perfil de Alto Impacto -->
+            <section class="mb-16">
+                <h2 class="section-title">Ingeniería & Perfil</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    Desarrollador Backend especializado en la construcción de **sistemas de alta disponibilidad** y automatización inteligente. Con **4 años de trayectoria docente** y experiencia técnica en el sector **Fintech**, poseo una capacidad avanzada para diseñar arquitecturas escalables, gestionar flujos de datos complejos e integrar modelos de **Inteligencia Artificial** para optimizar procesos de negocio. Enfocado en la eficiencia del lado del servidor, seguridad de datos y Clean Code.
+                </p>
+            </section>
+
+            <!-- Experiencia de Peso -->
+            <section class="mb-16">
+                <h2 class="section-title">Experiencia Técnica Senior</h2>
+                
+                <div class="space-y-12">
+                    <!-- COOPESOL -->
+                    <div class="work-card pl-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Backend Developer | Transaccional Core</h3>
+                                <p class="text-blue-600 text-[11px] font-black uppercase tracking-widest">COOPERATIVA COOPESOL | FINTECH</p>
+                            </div>
+                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded">AGO 2025 — OCT 2025</span>
+                        </div>
+                        <ul class="text-[13px] text-slate-600 space-y-3 leading-snug">
+                            <li class="flex gap-3"><span>▹</span> <span>Desarrollo de lógica de persistencia y **transaccionalidad bancaria** en PostgreSQL, implementando triggers y procedimientos para asegurar la integridad de saldos.</span></li>
+                            <li class="flex gap-3"><span>▹</span> <span>Construcción de **Endpoints RESTful** de alta seguridad bajo estándares DRF para la gestión de cuentas de socios.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- DOCENTE -->
+                    <div class="work-card pl-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Instructor Técnico en Ciencias de la Computación</h3>
+                                <p class="text-slate-500 text-[11px] font-black uppercase tracking-widest">COLEGIO MIXTO "NUESTRA SEÑORA DEL PILAR"</p>
+                            </div>
+                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded">2022 — 2026 (4 AÑOS)</span>
+                        </div>
+                        <ul class="text-[13px] text-slate-600 space-y-3">
+                            <li class="flex gap-3"><span>▹</span> <span>Instrucción en **Estructuras de Datos y Algoritmos**, fomentando prácticas de código eficiente y escalable.</span></li>
+                            <li class="flex gap-3"><span>▹</span> <span>Dirección de proyectos técnicos y despliegue de infraestructura local para la gestión educativa.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soluciones SaaS e IA -->
+            <section class="mb-16">
+                <h2 class="section-title">Proyectos de Ingeniería & IA</h2>
+                
+                <div class="space-y-8">
+                    <!-- INVORAX -->
+                    <div class="p-8 bg-slate-900 text-white rounded-[2rem] relative shadow-2xl overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-[9px] font-black px-6 py-2 uppercase tracking-widest">SaaS Multi-tenant</div>
+                        <h4 class="text-2xl font-black mb-1">INVORAX ERP</h4>
+                        <p class="text-blue-400 text-xs font-bold mb-5 tracking-widest uppercase">Arquitectura Backend en Django & PostgreSQL</p>
+                        <p class="text-sm text-slate-400 mb-6 leading-relaxed italic">
+                            Sistema de gestión empresarial con aislamiento dinámico de datos (Multi-tenancy). Automatización de inventarios críticos y flujos de trabajo en producción real.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Database Isolation</span>
+                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">JWT Auth</span>
+                            <span class="bg-blue-600/30 text-blue-300 px-3 py-1 rounded-full text-[10px] font-bold border border-blue-500/20">AI Automated Reports</span>
+                        </div>
+                        <div class="mt-8 flex items-center justify-between">
+                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-black underline decoration-2 underline-offset-4">EXPLORAR DEMO EN VIVO</a>
+                            <span class="text-[9px] text-slate-500 uppercase font-black">Empresas: Grupo Mallo & Comayma</span>
+                        </div>
+                    </div>
+
+                    <!-- GRID PROYECTOS TÉCNICOS -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- GRANJA -->
+                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-lg transition-shadow">
+                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
+                                Automatización Bio-Tech
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            </h5>
+                            <p class="text-[12px] text-slate-600 mb-4 leading-relaxed">Backend especializado para trazabilidad operativa en granjas, gestionando lógica de salud y alimentación mediante **APIs optimizadas**.</p>
+                            <div class="flex gap-2"><span class="tech-pill">Python</span><span class="tech-pill">Process Automation</span></div>
+                        </div>
+
+                        <!-- IA / NOTITAS -->
+                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-lg transition-shadow">
+                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3">AI Powered / Notitas</h5>
+                            <p class="text-[12px] text-slate-600 mb-4 leading-relaxed">Integración de **Modelos de Lenguaje (LLMs)** para el procesamiento inteligente de mensajes y sincronización en tiempo real vía Sockets.</p>
+                            <div class="flex gap-2"><span class="tech-pill">AI Integration</span><span class="tech-pill">TypeScript</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Repositorios -->
+            <section class="no-print">
+                <h2 class="section-title">Technical Repositories</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="https://github.com/Sebas16608/no-mas-pan" target="_blank" class="group p-4 border border-slate-200 rounded-xl text-center hover:border-blue-500 transition-all">
+                        <p class="text-[10px] font-black uppercase text-slate-400 group-hover:text-blue-600">Nutrition API</p>
+                        <span class="text-[9px] font-bold text-slate-900 uppercase tracking-tighter">FastAPI Backend</span>
+                    </a>
+                    <a href="https://github.com/Sebas16608/colegio-app" target="_blank" class="group p-4 border border-slate-200 rounded-xl text-center hover:border-blue-500 transition-all">
+                        <p class="text-[10px] font-black uppercase text-slate-400 group-hover:text-blue-600">SGA Core</p>
+                        <span class="text-[9px] font-bold text-slate-900 uppercase tracking-tighter">Django Systems</span>
+                    </a>
+                    <a href="https://github.com/Sebas16608" target="_blank" class="group p-4 bg-slate-900 rounded-xl text-center hover:bg-black transition-all col-span-2">
+                        <p class="text-[10px] font-black uppercase text-blue-400">GitHub Professional Portfolio</p>
+                        <span class="text-[9px] font-bold text-white/50 uppercase">Explore full codebase</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Botón de Exportación -->
+    <div class="max-w-5xl mx-auto mt-10 text-center no-print pb-12">
+        <button onclick="window.print()" class="bg-[#0f172a] hover:bg-black text-white font-black py-5 px-16 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95 text-xs uppercase tracking-widest">
+            Exportar CV para Ingeniería (PDF)
+        </button>
+    </div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Angel Sebastián Rodas Rodriguez | Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
         @media print { .no-print { display: none; } body { background-color: white; padding: 0; } .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; } }
         .section-title { display: flex; align-items: center; gap: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #0f172a; margin-bottom: 1.5rem; font-size: 0.85rem; }

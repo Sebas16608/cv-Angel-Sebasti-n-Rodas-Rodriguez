@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 
     <div class="cv-container max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden min-h-[1500px] flex flex-col md:flex-row border border-slate-100">
         
-        <!-- Sidebar Izquierda: Enfoque Técnico -->
+        <!-- Left Sidebar -->
         <aside class="w-full md:w-80 bg-[#0f172a] text-slate-400 p-8 flex flex-col">
             <div class="text-center mb-10">
                 <div class="w-40 h-40 rounded-3xl border-2 border-blue-500/30 overflow-hidden shadow-2xl mx-auto mb-6 transform hover:scale-105 transition-all duration-300">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="space-y-12">
-                <!-- Stack de Ingeniería -->
+                <!-- Technical Stack -->
                 <section>
                     <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Technical Arsenal</h3>
                     <div class="space-y-5">
@@ -57,7 +57,6 @@
                             <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">DATA & INFRA</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">PostgreSQL</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Redis</span>
                                 <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Docker / Nginx</span>
                                 <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Linux VPS</span>
                             </div>
@@ -65,7 +64,7 @@
                     </div>
                 </section>
 
-                <!-- Engineering Method -->
+                <!-- Engineering Principles -->
                 <section>
                     <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Engineering Principles</h3>
                     <ul class="text-[11px] space-y-3 font-medium text-slate-300">
@@ -77,67 +76,76 @@
                 </section>
 
                 <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Formación</h3>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Education</h3>
                     <div class="bg-slate-800/40 p-4 rounded-xl border border-white/5">
-                        <p class="text-[10px] font-black text-white uppercase mb-1">Ingeniería en Sistemas</p>
+                        <p class="text-[10px] font-black text-white uppercase mb-1">Systems Engineering</p>
                         <p class="text-[10px] text-slate-400">Univ. Mariano Gálvez</p>
-                        <p class="text-[9px] text-blue-400 font-bold mt-2 uppercase">2026 — Presente</p>
+                        <p class="text-[9px] text-blue-400 font-bold mt-2 uppercase">2026 — Present</p>
                     </div>
+                </section>
+
+                <!-- Portfolio Link -->
+                <section>
+                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Portfolio</h3>
+                    <a href="https://sebastian-rodas.vercel.app/" target="_blank" class="block bg-blue-600/20 border border-blue-500/30 p-4 rounded-xl hover:bg-blue-600/30 transition-all">
+                        <p class="text-[10px] font-black text-blue-300 uppercase mb-1">Personal Portfolio</p>
+                        <p class="text-[10px] text-slate-400 break-all">sebastian-rodas.vercel.app</p>
+                    </a>
                 </section>
             </div>
         </aside>
 
-        <!-- Contenido Principal -->
+        <!-- Main Content -->
         <main class="flex-grow p-8 md:p-12 bg-white">
             
             <section class="mb-14">
-                <h2 class="section-title">Perfil Profesional</h2>
+                <h2 class="section-title">Professional Profile</h2>
                 <p class="text-slate-600 leading-relaxed text-sm">
-                    Desarrollador Backend con alta capacidad para resolver problemas complejos mediante **arquitecturas escalables y automatización**. Con 4 años de experiencia docente y trayectoria en el sector **Fintech**, me especializo en el desarrollo de APIs robustas, integración de inteligencia artificial y gestión de sistemas de alta disponibilidad. Experto en transformar lógica de negocio en código eficiente y seguro.
+                    Backend Developer with a strong ability to solve complex problems through <strong>scalable architectures and automation</strong>. With 1 year of professional experience in the <strong>Fintech</strong> sector, I specialize in building robust APIs, integrating artificial intelligence, and managing high-availability systems. Skilled at translating business logic into efficient, secure code.
                 </p>
             </section>
 
             <section class="mb-14">
-                <h2 class="section-title">Experiencia Técnica Destacada</h2>
+                <h2 class="section-title">Work Experience</h2>
                 <div class="space-y-10">
                     <div class="work-card pl-6">
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Backend Developer | Core Bancario</h3>
+                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Backend Developer | Core Banking</h3>
                                 <p class="text-blue-600 text-[11px] font-black uppercase tracking-widest">COOPESOL | FINTECH</p>
                             </div>
-                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">Ago 2025 — Oct 2025</span>
+                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">Aug 2025 — Oct 2025</span>
                         </div>
                         <ul class="text-[13px] text-slate-600 space-y-2">
-                            <li>▹ Desarrollo de lógica de **transaccionalidad bancaria** en PostgreSQL, asegurando la integridad de datos en saldos de socios.</li>
-                            <li>▹ Implementación de APIs bajo estándares de seguridad para la gestión de cuentas y movimientos financieros.</li>
+                            <li>▹ Developed <strong>banking transaction logic</strong> in PostgreSQL, ensuring data integrity across member account balances.</li>
+                            <li>▹ Implemented security-compliant APIs for account management and financial movement tracking.</li>
                         </ul>
                     </div>
 
                     <div class="work-card pl-6">
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Instructor Técnico en TI</h3>
+                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">IT Technical Instructor</h3>
                                 <p class="text-slate-500 text-[11px] font-black uppercase tracking-widest">COL. NUESTRA SEÑORA DEL PILAR</p>
                             </div>
                             <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">2022 — 2026</span>
                         </div>
-                        <p class="text-[13px] text-slate-600 leading-relaxed">Liderazgo en la formación técnica de estudiantes, enfocándome en lógica algorítmica y administración de servidores locales.</p>
+                        <p class="text-[13px] text-slate-600 leading-relaxed">Led technical training for students focused on algorithmic logic and local server administration.</p>
                     </div>
                 </div>
             </section>
 
             <section class="mb-14">
-                <h2 class="section-title">Proyectos de Ingeniería Backend</h2>
+                <h2 class="section-title">Backend Engineering Projects</h2>
                 
                 <div class="space-y-8">
-                    <!-- INVORAX (Inteligente) -->
+                    <!-- INVORAX -->
                     <div class="p-8 bg-slate-900 text-white rounded-[2rem] relative shadow-xl">
                         <div class="absolute top-0 right-0 bg-blue-600 text-white text-[9px] font-black px-6 py-2 uppercase tracking-widest">Enterprise Solution</div>
-                        <h4 class="text-2xl font-black mb-1">INVORAX ERP | Lógica Inteligente</h4>
+                        <h4 class="text-2xl font-black mb-1">INVORAX ERP | Smart Logic</h4>
                         <p class="text-blue-400 text-xs font-bold mb-5 tracking-widest uppercase">Django REST Framework | PostgreSQL | Multi-tenancy</p>
                         <p class="text-[13px] text-slate-400 mb-6 leading-relaxed">
-                            No es solo un CRUD; es un sistema **SaaS Multi-tenant** con aislamiento de datos a nivel de base de datos. Implementé una **lógica inteligente de detección automática** de productos bajos, que sugiere reposiciones basadas en historiales de stock, optimizando la cadena de suministro de Grupo Mallo y Comayma.
+                            Not just a CRUD — a <strong>Multi-tenant SaaS</strong> system with database-level data isolation. Implemented <strong>intelligent auto-detection logic</strong> for low-stock products, suggesting restocking based on inventory history, optimizing the supply chain for Grupo Mallo and Comayma.
                         </p>
                         <div class="flex flex-wrap gap-3">
                             <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">JWT Auth</span>
@@ -145,56 +153,56 @@
                             <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Nginx Reverse Proxy</span>
                         </div>
                         <div class="mt-8 flex items-center justify-between">
-                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-black underline decoration-2 underline-offset-4">EXPLORAR SISTEMA</a>
-                            <span class="text-[9px] text-slate-500 uppercase font-black">Utilizado en: Sector Veterinario e Industrial</span>
+                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-black underline decoration-2 underline-offset-4">EXPLORE SYSTEM</a>
+                            <span class="text-[9px] text-slate-500 uppercase font-black">Used in: Veterinary & Industrial Sector</span>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- CARRITO INTELIGENTE -->
+                        <!-- REAL-TIME API -->
                         <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
                             <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                API Control Real-Time
+                                Real-Time Control API
                                 <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Flask</span>
                             </h5>
                             <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                API REST diseñada para el monitoreo y control remoto de dispositivos. Implementé endpoints de baja latencia para la gestión de estados y telemetría en tiempo real.
+                                REST API built for remote device monitoring and control. Implemented low-latency endpoints for state management and real-time telemetry.
                             </p>
                             <div class="flex gap-2"><span class="tech-pill">Real-time Data</span><span class="tech-pill">RESTful API</span></div>
                         </div>
 
-                        <!-- IA NOTITAS -->
+                        <!-- AI BACKEND -->
                         <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
                             <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
                                 AI Powered Backend
                                 <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Socket.io</span>
                             </h5>
                             <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Plataforma de comunicación con **procesamiento inteligente de lenguaje natural (LLM)**. El backend gestiona sockets persistentes y colas de tareas para respuestas rápidas.
+                                Communication platform with <strong>NLP processing via LLMs</strong>. The backend manages persistent sockets and task queues for fast, intelligent responses.
                             </p>
                             <div class="flex gap-2"><span class="tech-pill">AI Integration</span><span class="tech-pill">Node.js</span></div>
                         </div>
 
-                        <!-- NUTRICIÓN API -->
+                        <!-- PERFORMANCE API -->
                         <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
                             <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
                                 Performance API
                                 <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Express + TS</span>
                             </h5>
                             <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Micro-servicio asíncrono optimizado para cálculos nutricionales masivos. Enfocado en la velocidad de respuesta y el manejo de concurrencia.
+                                Async microservice optimized for bulk nutritional calculations. Focused on response speed and concurrency handling.
                             </p>
                             <div class="flex gap-2"><span class="tech-pill">Asynchronous</span><span class="tech-pill">Swagger Doc</span></div>
                         </div>
 
-                        <!-- SGA CORE -->
+                        <!-- ACADEMIC CORE -->
                         <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
                             <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                Gestión Académica Core
+                                Academic Management Core
                                 <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Django</span>
                             </h5>
                             <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Arquitectura backend robusta para la gestión masiva de registros escolares, promedios automáticos y generación de reportes PDF dinámicos.
+                                Robust backend architecture for bulk school record management, automated GPA calculations, and dynamic PDF report generation.
                             </p>
                             <div class="flex gap-2"><span class="tech-pill">Complex CRUD</span><span class="tech-pill">File Streaming</span></div>
                         </div>
@@ -202,26 +210,31 @@
                 </div>
             </section>
 
-            <!-- Repositorios Técnicos -->
+            <!-- Source Code & Portfolio -->
             <section class="no-print border-t border-slate-100 pt-10">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div class="text-center md:text-left">
-                        <h4 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-1">Código Fuente & Ingeniería</h4>
-                        <p class="text-[11px] text-slate-500">Explora la arquitectura de estos sistemas en mi GitHub profesional.</p>
+                        <h4 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-1">Source Code & Engineering</h4>
+                        <p class="text-[11px] text-slate-500">Explore the architecture of these systems on my GitHub and personal portfolio.</p>
                     </div>
-                    <a href="https://github.com/Sebas16608" target="_blank" class="bg-slate-900 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg">
-                        GITHUB: SEBAS16608
-                    </a>
+                    <div class="flex gap-4">
+                        <a href="https://sebastian-rodas.vercel.app/" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg">
+                            PORTFOLIO
+                        </a>
+                        <a href="https://github.com/Sebas16608" target="_blank" class="bg-slate-900 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg">
+                            GITHUB
+                        </a>
+                    </div>
                 </div>
             </section>
 
         </main>
     </div>
 
-    <!-- Botón de Exportación -->
+    <!-- Export Button -->
     <div class="max-w-5xl mx-auto mt-10 text-center no-print pb-12">
         <button onclick="window.print()" class="bg-[#0f172a] hover:bg-blue-700 text-white font-black py-5 px-16 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95 text-[10px] uppercase tracking-[0.2em]">
-            Exportar CV de Ingeniería (PDF)
+            Export Engineering CV (PDF)
         </button>
     </div>
 

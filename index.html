@@ -1,247 +1,274 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Angel Sebastián Rodas Rodriguez | Data Scraping & Backend Engineer</title>
+    <title>CV - Ángel Sebastián Rodas Rodríguez | Tecnología</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; color: #0f172a; }
-        @media print { .no-print { display: none; } body { background-color: white; padding: 0; } .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; border: none; } }
-        .section-title { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #1e40af; margin-bottom: 1.25rem; font-size: 0.75rem; }
-        .section-title::after { content: ""; height: 1px; flex-grow: 1; background: #e2e8f0; }
-        .tech-pill { background-color: #eff6ff; border: 1px solid #dbeafe; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; color: #1e40af; text-transform: uppercase; }
-        .work-card { border-left: 3px solid #cbd5e1; transition: border-color 0.3s; }
-        .work-card:hover { border-left-color: #2563eb; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background:#f1f5f9;
+            color:#0f172a;
+        }
+
+        .section-title {
+            font-weight:800;
+            text-transform:uppercase;
+            letter-spacing:.15em;
+            color:#1e40af;
+            font-size:.75rem;
+            display:flex;
+            align-items:center;
+            gap:.75rem;
+            margin-bottom:1rem;
+        }
+
+        .section-title::after {
+            content:"";
+            height:1px;
+            background:#e2e8f0;
+            flex-grow:1;
+        }
     </style>
 </head>
-<body class="p-4 md:p-6 lg:p-10">
 
-    <div class="cv-container max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden min-h-[1500px] flex flex-col md:flex-row border border-slate-100">
+<body class="p-5">
 
-        <!-- Left Sidebar -->
-        <aside class="w-full md:w-80 bg-[#0f172a] text-slate-400 p-8 flex flex-col">
-            <div class="text-center mb-10">
-                <div class="w-40 h-40 rounded-3xl border-2 border-blue-500/30 overflow-hidden shadow-2xl mx-auto mb-6 transform hover:scale-105 transition-all duration-300">
-                    <img src="imagen.png" alt="Angel Sebastián" class="w-full h-full object-cover">
-                </div>
-                <h1 class="text-white text-2xl font-black leading-tight uppercase tracking-tight">Angel Sebastián Rodas</h1>
-                <p class="text-blue-400 font-bold text-[10px] mt-3 uppercase tracking-[0.25em] border-y border-white/10 py-2">Data Scraping & Backend Engineer</p>
-            </div>
+<div class="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
 
-            <div class="space-y-12">
-                <!-- Technical Stack -->
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Technical Arsenal</h3>
-                    <div class="space-y-5">
-                        <div>
-                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">LANGUAGES & SCRAPING</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 text-white px-2 py-1 rounded text-[10px] font-bold">Python</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">BeautifulSoup / Requests</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Node.js / TS</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">HTML5 / CSS3</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">DATA PROCESSING & FRAMEWORKS</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-[10px] font-bold border border-blue-500/30">Pandas</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Django / DRF</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Flask</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Express.js</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">DATA & INFRA</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 text-white px-2 py-1 rounded text-[10px] font-bold">Advanced SQL</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">PostgreSQL</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Linux</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Docker / Nginx</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">APIs REST (Integration)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+<!-- SIDEBAR -->
+<aside class="md:w-80 bg-slate-900 text-white p-8">
 
-                <!-- Engineering Principles -->
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Engineering Principles</h3>
-                    <ul class="text-[11px] space-y-3 font-medium text-slate-300">
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Clean Code & SOLID</li>
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Automated Data Extraction</li>
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Advanced SQL Normalization</li>
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Data Quality & Reliability</li>
-                    </ul>
-                </section>
+    <div class="text-center">
+        <img src="imagen.png"
+        class="w-40 h-40 mx-auto rounded-3xl object-cover border-2 border-blue-500 mb-5">
 
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Education</h3>
-                    <div class="bg-slate-800/40 p-4 rounded-xl border border-white/5">
-                        <p class="text-[10px] font-black text-white uppercase mb-1">Systems Engineering</p>
-                        <p class="text-[10px] text-slate-400">Univ. Mariano Gálvez</p>
-                        <p class="text-[9px] text-blue-400 font-bold mt-2 uppercase">2026 — Present</p>
-                    </div>
-                </section>
+        <h1 class="text-2xl font-black">
+            Ángel Sebastián Rodas
+        </h1>
 
-                <!-- Portfolio Link -->
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Portfolio</h3>
-                    <a href="https://sebastian-rodas.vercel.app/" target="_blank" class="block bg-blue-600/20 border border-blue-500/30 p-4 rounded-xl hover:bg-blue-600/30 transition-all">
-                        <p class="text-[10px] font-black text-blue-300 uppercase mb-1">Personal Portfolio</p>
-                        <p class="text-[10px] text-slate-400 break-all">sebastian-rodas.vercel.app</p>
-                    </a>
-                </section>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="flex-grow p-8 md:p-12 bg-white">
-
-            <section class="mb-14">
-                <h2 class="section-title">Professional Profile</h2>
-                <p class="text-slate-600 leading-relaxed text-sm">
-                    Backend & Data Scraping Developer specialized in design, <strong>automation, and scalable data pipeline architectures</strong>. With professional experience in the <strong>Fintech sector</strong>, I excel at building data extraction tools via Python, integrating complex REST APIs, and processing heavy workloads. Expert in <strong>Advanced SQL</strong> database modeling and data parsing to translate high-volume information into actionable business assets while guaranteeing high standards of reliability and ethics.
-                </p>
-            </section>
-
-            <section class="mb-14">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="space-y-10">
-                    <div class="work-card pl-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Backend Developer | Core Banking</h3>
-                                <p class="text-blue-600 text-[11px] font-black uppercase tracking-widest">COOPESOL | FINTECH</p>
-                            </div>
-                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">Aug 2025 — Oct 2025</span>
-                        </div>
-                        <ul class="text-[13px] text-slate-600 space-y-2">
-                            <li>▹ Developed robust <strong>banking transaction logic</strong> using complex relational models in PostgreSQL, ensuring total data integrity.</li>
-                            <li>▹ Designed and integrated secure, high-concurrency <strong>REST APIs</strong> for critical accounting movements and external financial tracking.</li>
-                            <li>▹ Implemented data aggregation queries optimizing the storage and query speeds of financial statements.</li>
-                        </ul>
-                    </div>
-
-                    <div class="work-card pl-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">IT Technical Instructor</h3>
-                                <p class="text-slate-500 text-[11px] font-black uppercase tracking-widest">COL. NUESTRA SEÑORA DEL PILAR</p>
-                            </div>
-                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">2022 — 2026</span>
-                        </div>
-                        <p class="text-[13px] text-slate-600 leading-relaxed">Led high-level technical training focused on programmatic algorithmic logic, advanced structured data control, and local database systems server administration.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h2 class="section-title">Engineering & Data Projects</h2>
-
-                <div class="space-y-8">
-                    <!-- INVORAX -->
-                    <div class="p-8 bg-slate-900 text-white rounded-[2rem] relative shadow-xl">
-                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-[9px] font-black px-6 py-2 uppercase tracking-widest">Enterprise Data SaaS</div>
-                        <h4 class="text-2xl font-black mb-1">INVORAX ERP | Smart Data Analytics</h4>
-                        <p class="text-blue-400 text-xs font-bold mb-5 tracking-widest uppercase">Django REST Framework | Advanced SQL (PostgreSQL) | Multi-tenancy</p>
-                        <p class="text-[13px] text-slate-400 mb-6 leading-relaxed">
-                            A multi-tenant SaaS application engineering clean database-level data isolation. Built with custom Python back-end scripts that process structural history logs and <strong>automated data evaluation logic</strong> to handle analytics for supply chain tracking across corporate clusters.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Relational Database Integration</span>
-                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Data Pipelines</span>
-                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">REST API Architecture</span>
-                        </div>
-                        <div class="mt-8 flex items-center justify-between">
-                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-black underline decoration-2 underline-offset-4">EXPLORE SYSTEM</a>
-                            <span class="text-[9px] text-slate-500 uppercase font-black">Context: Industrial Analytics Sector</span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- REAL-TIME API / DATA SCRAPER CONCEPT -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                Data Extraction & Automation API
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Python / Flask</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Custom engine built with Python for automatic page structures parsing. Implemented robust error handling routines (`try/except`) for DOM element parsing, structured output mapping, and API relaying.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Web Scraping</span><span class="tech-pill">HTML/CSS Parser</span></div>
-                        </div>
-
-                        <!-- AI BACKEND -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                AI NLP Pipeline Core
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Python / Pandas</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Extracted text-processing framework managing LLM processing and high-volume data structures transformation using <strong>Pandas</strong> to sanitize and normalize target datasets before production queuing.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Pandas Data Sanitization</span><span class="tech-pill">JSON Mapping</span></div>
-                        </div>
-
-                        <!-- PERFORMANCE API -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                High-Concurrency Microservice
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Node.js + TS</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Asynchronous microservice optimized for rapid dataset calculations and payload processing. Focused on optimized task pooling and heavy asynchronous operations throughput.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Asynchronous Flow</span><span class="tech-pill">High Concurrency</span></div>
-                        </div>
-
-                        <!-- ACADEMIC CORE -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                Academic Management Core
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Django / SQL</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Data manipulation engine for massive database batch updates, automated statistical calculations, and dynamic, error-free streaming report generation.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Batch Data Processing</span><span class="tech-pill">SQL Aggregation</span></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Source Code & Portfolio -->
-            <section class="no-print border-t border-slate-100 pt-10">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="text-center md:text-left">
-                        <h4 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-1">Source Code & Engineering</h4>
-                        <p class="text-[11px] text-slate-500">Explore the architecture of these systems on my GitHub and personal portfolio.</p>
-                    </div>
-                    <div class="flex gap-4">
-                        <a href="https://sebastian-rodas.vercel.app/" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg">
-                            PORTFOLIO
-                        </a>
-                        <a href="https://github.com/Sebas16608" target="_blank" class="bg-slate-900 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg">
-                            GITHUB
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+        <p class="text-blue-400 font-bold text-xs mt-3 uppercase">
+            Tecnología | Soporte TI | Desarrollo Web
+        </p>
     </div>
 
-    <!-- Export Button -->
-    <div class="max-w-5xl mx-auto mt-10 text-center no-print pb-12">
-        <button onclick="window.print()" class="bg-[#0f172a] hover:bg-blue-700 text-white font-black py-5 px-16 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95 text-[10px] uppercase tracking-[0.2em]">
-            Export Engineering CV (PDF)
-        </button>
+
+    <div class="mt-10 space-y-8">
+
+        <section>
+            <h3 class="text-blue-400 text-xs font-bold uppercase">
+                Conocimientos
+            </h3>
+
+            <ul class="mt-3 text-sm space-y-2 text-slate-300">
+                <li>• Hardware de computadoras</li>
+                <li>• Instalación de componentes</li>
+                <li>• Windows y Linux</li>
+                <li>• Mantenimiento básico</li>
+                <li>• Redes básicas</li>
+                <li>• Soporte a usuarios</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3 class="text-blue-400 text-xs font-bold uppercase">
+                Desarrollo
+            </h3>
+
+            <ul class="mt-3 text-sm space-y-2 text-slate-300">
+                <li>• Python / Django</li>
+                <li>• Django REST Framework</li>
+                <li>• TypeScript / Express</li>
+                <li>• SQL / PostgreSQL</li>
+                <li>• Git y Linux</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3 class="text-blue-400 text-xs font-bold uppercase">
+                Educación
+            </h3>
+
+            <p class="mt-3 text-sm text-slate-300">
+                Ingeniería en Sistemas<br>
+                Universidad Mariano Gálvez<br>
+                2026 - Actualidad
+            </p>
+        </section>
+
     </div>
+
+</aside>
+
+
+
+<!-- CONTENT -->
+
+<main class="p-10 flex-1">
+
+
+<section class="mb-10">
+
+<h2 class="section-title">
+Perfil Profesional
+</h2>
+
+<p class="text-slate-600 leading-relaxed">
+Estudiante de Ingeniería en Sistemas con experiencia en tecnología,
+atención al cliente y desarrollo web. Poseo conocimientos en hardware,
+software, sistemas operativos Windows y Linux, instalación de componentes
+y solución de problemas tecnológicos.
+
+Me apasiona la tecnología y ayudar a las personas a encontrar soluciones
+adecuadas según sus necesidades, brindando una atención clara y profesional.
+</p>
+
+</section>
+
+
+
+<section class="mb-10">
+
+<h2 class="section-title">
+Experiencia
+</h2>
+
+
+<div class="border-l-4 border-blue-600 pl-5 mb-8">
+
+<h3 class="font-black text-lg">
+Practicante de Desarrollo Web
+</h3>
+
+<p class="text-blue-600 font-bold text-sm">
+COOPESOL
+</p>
+
+
+<ul class="mt-3 text-slate-600 text-sm space-y-2">
+<li>• Desarrollo y mantenimiento de sistemas internos.</li>
+<li>• Resolución de problemas relacionados con software.</li>
+<li>• Trabajo con bases de datos y aplicaciones web.</li>
+</ul>
+
+</div>
+
+
+
+<div class="border-l-4 border-blue-600 pl-5 mb-8">
+
+<h3 class="font-black text-lg">
+Atención al Cliente y Caja
+</h3>
+
+<p class="text-blue-600 font-bold text-sm">
+COOPERATIVA
+</p>
+
+
+<ul class="mt-3 text-slate-600 text-sm space-y-2">
+<li>• Atención directa a clientes.</li>
+<li>• Manejo de caja y pagos.</li>
+<li>• Resolución de consultas y apoyo al usuario.</li>
+</ul>
+
+</div>
+
+
+
+<div class="border-l-4 border-blue-600 pl-5">
+
+<h3 class="font-black text-lg">
+Instructor de Computación
+</h3>
+
+
+<ul class="mt-3 text-slate-600 text-sm space-y-2">
+<li>• Enseñanza de herramientas informáticas.</li>
+<li>• Explicación de conceptos técnicos de forma sencilla.</li>
+<li>• Apoyo a usuarios con problemas tecnológicos.</li>
+</ul>
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="mb-10">
+
+<h2 class="section-title">
+Proyectos
+</h2>
+
+
+<div class="bg-slate-900 text-white rounded-2xl p-6">
+
+<h3 class="font-black text-xl">
+Invorax - Sistema de Inventario y Ventas
+</h3>
+
+
+<p class="text-slate-300 mt-3 text-sm">
+Desarrollo de una plataforma para gestión empresarial,
+control de productos, inventario y procesos internos.
+</p>
+
+
+<div class="mt-4 text-blue-400 text-sm">
+Django | PostgreSQL | REST API
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<section>
+
+<h2 class="section-title">
+Fortalezas
+</h2>
+
+
+<div class="grid md:grid-cols-3 gap-4">
+
+<div class="bg-blue-50 p-4 rounded-xl">
+Responsabilidad
+</div>
+
+<div class="bg-blue-50 p-4 rounded-xl">
+Aprendizaje rápido
+</div>
+
+<div class="bg-blue-50 p-4 rounded-xl">
+Atención al cliente
+</div>
+
+
+</div>
+
+</section>
+
+
+
+</main>
+
+</div>
+
 
 </body>
 </html>
+```

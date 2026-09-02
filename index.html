@@ -1,247 +1,410 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Angel Sebastián Rodas Rodriguez | Ingeniero de Backend y Extracción de Datos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title>CV - Angel Sebastián Rodas Rodríguez</title>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; color: #0f172a; }
-        @media print { .no-print { display: none; } body { background-color: white; padding: 0; } .cv-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; border: none; } }
-        .section-title { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #1e40af; margin-bottom: 1.25rem; font-size: 0.75rem; }
-        .section-title::after { content: ""; height: 1px; flex-grow: 1; background: #e2e8f0; }
-        .tech-pill { background-color: #eff6ff; border: 1px solid #dbeafe; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; color: #1e40af; text-transform: uppercase; }
-        .work-card { border-left: 3px solid #cbd5e1; transition: border-color 0.3s; }
-        .work-card:hover { border-left-color: #2563eb; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: #fff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px;
+            line-height: 1.45;
+            font-size: 11pt;
+        }
+
+        h1 {
+            font-size: 24pt;
+            margin: 0;
+            text-align: center;
+        }
+
+        .headline {
+            text-align: center;
+            font-size: 13pt;
+            font-weight: bold;
+            margin: 5px 0 10px;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 10pt;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 14pt;
+            border-bottom: 1px solid #222;
+            padding-bottom: 4px;
+            margin-top: 22px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 11.5pt;
+            margin: 14px 0 2px;
+        }
+
+        .job-title {
+            font-weight: bold;
+        }
+
+        .date {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .skills p {
+            margin-bottom: 7px;
+        }
+
+        a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 25px;
+            }
+
+            a {
+                color: #111;
+                text-decoration: none;
+            }
+        }
     </style>
 </head>
-<body class="p-4 md:p-6 lg:p-10">
 
-    <div class="cv-container max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden min-h-[1500px] flex flex-col md:flex-row border border-slate-100">
+<body>
 
-        <!-- Left Sidebar -->
-        <aside class="w-full md:w-80 bg-[#0f172a] text-slate-400 p-8 flex flex-col">
-            <div class="text-center mb-10">
-                <div class="w-40 h-40 rounded-3xl border-2 border-blue-500/30 overflow-hidden shadow-2xl mx-auto mb-6 transform hover:scale-105 transition-all duration-300">
-                    <img src="imagen.png" alt="Angel Sebastián" class="w-full h-full object-cover">
-                </div>
-                <h1 class="text-white text-2xl font-black leading-tight uppercase tracking-tight">Angel Sebastián Rodas</h1>
-                <p class="text-blue-400 font-bold text-[10px] mt-3 uppercase tracking-[0.25em] border-y border-white/10 py-2">Ingeniero de Backend y Extracción de Datos</p>
-            </div>
+    <header>
+        <h1>Ángel Sebastián Rodas Rodríguez</h1>
 
-            <div class="space-y-12">
-                <!-- Technical Stack -->
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Arsenal Técnico</h3>
-                    <div class="space-y-5">
-                        <div>
-                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">LENGUAJES Y SCRAPING</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 text-white px-2 py-1 rounded text-[10px] font-bold">Python</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">BeautifulSoup / Requests</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Node.js / TS</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">HTML5 / CSS3</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">PROCESAMIENTO DE DATOS Y FRAMEWORKS</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-[10px] font-bold border border-blue-500/30">Pandas</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Django / DRF</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Flask</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Express.js</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[9px] font-black text-blue-400/80 mb-2 tracking-widest">DATOS E INFRAESTRUCTURA</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 text-white px-2 py-1 rounded text-[10px] font-bold">SQL Avanzado</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">PostgreSQL</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Linux</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">Docker / Nginx</span>
-                                <span class="bg-slate-800 text-white px-2 py-1 rounded text-[10px] font-bold">APIs REST (Integración)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <div class="headline">
+            Backend / Full Stack Software Engineer
+        </div>
 
-                <!-- Engineering Principles -->
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Principios de Ingeniería</h3>
-                    <ul class="text-[11px] space-y-3 font-medium text-slate-300">
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Código Limpio y SOLID</li>
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Extracción Automatizada de Datos</li>
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Normalización Avanzada de SQL</li>
-                        <li class="flex items-start gap-3"><span class="mt-1 w-1 h-1 bg-blue-500 rounded-full shrink-0"></span> Calidad y Confiabilidad de Datos</li>
-                    </ul>
-                </section>
+        <div class="contact">
+            Guatemala | Disponible para trabajo remoto<br>
+            Portfolio: https://sebastian-portfolio-one.vercel.app/<br>
+            GitHub: https://github.com/Sebas16608<br>
+            LinkedIn: https://www.linkedin.com/in/sebastián-rodas-65564b303/
+        </div>
+    </header>
 
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Educación</h3>
-                    <div class="bg-slate-800/40 p-4 rounded-xl border border-white/5">
-                        <p class="text-[10px] font-black text-white uppercase mb-1">Ingeniería en Sistemas</p>
-                        <p class="text-[10px] text-slate-400">Univ. Mariano Gálvez</p>
-                        <p class="text-[9px] text-blue-400 font-bold mt-2 uppercase">2026 — Presente</p>
-                    </div>
-                </section>
 
-                <!-- Portfolio Link -->
-                <section>
-                    <h3 class="text-white text-[10px] font-black uppercase tracking-[0.2em] mb-5">Portafolio</h3>
-                    <a href="https://sebastian-rodas.vercel.app/" target="_blank" class="block bg-blue-600/20 border border-blue-500/30 p-4 rounded-xl hover:bg-blue-600/30 transition-all">
-                        <p class="text-[10px] font-black text-blue-300 uppercase mb-1">Portafolio Personal</p>
-                        <p class="text-[10px] text-slate-400 break-all">sebastian-rodas.vercel.app</p>
-                    </a>
-                </section>
-            </div>
-        </aside>
+    <section>
+        <h2>Perfil Profesional</h2>
 
-        <!-- Main Content -->
-        <main class="flex-grow p-8 md:p-12 bg-white">
+        <p>
+            Desarrollador de software con enfoque en Backend y experiencia en
+            desarrollo Full Stack. Experiencia trabajando con Python, Django,
+            Django REST Framework, Flask, JavaScript, TypeScript, C y C++.
+            Experiencia práctica en desarrollo de sistemas fintech, APIs REST,
+            aplicaciones SaaS multi-tenant, bases de datos relacionales,
+            automatización de procesos, procesamiento de datos y administración
+            de sistemas Linux.
+        </p>
 
-            <section class="mb-14">
-                <h2 class="section-title">Perfil Profesional</h2>
-                <p class="text-slate-600 leading-relaxed text-sm">
-                    Desarrollador Backend y Web Scraping especializado en el diseño, <strong>automatización y arquitectura de tuberías de datos (pipelines) escalables</strong>. Con experiencia profesional en el <strong>sector Fintech</strong>, destaco en la creación de herramientas de extracción de datos mediante Python, integración de APIs REST complejas y procesamiento de grandes volúmenes de trabajo. Experto en modelado de bases de datos <strong>SQL Avanzado</strong> y análisis sintáctico (parsing) de datos para transformar información masiva en activos comerciales estratégicos, garantizando altos estándares de confiabilidad y ética.
-                </p>
-            </section>
+        <p>
+            Interesado en desarrollar software mantenible, resolver problemas
+            mediante automatización y participar en proyectos donde pueda
+            aplicar conocimientos de programación, arquitectura de software,
+            bases de datos e infraestructura.
+        </p>
+    </section>
 
-            <section class="mb-14">
-                <h2 class="section-title">Experiencia Laboral</h2>
-                <div class="space-y-10">
-                    <div class="work-card pl-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Desarrollador Backend | Core Bancario</h3>
-                                <p class="text-blue-600 text-[11px] font-black uppercase tracking-widest">COOPESOL | FINTECH</p>
-                            </div>
-                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">Ago 2025 — Oct 2025</span>
-                        </div>
-                        <ul class="text-[13px] text-slate-600 space-y-2">
-                            <li>▹ Desarrollé una sólida <strong>lógica de transacciones bancarias</strong> utilizando modelos relacionales complejos en PostgreSQL, asegurando la integridad total de los datos.</li>
-                            <li>▹ Diseñé e integré <strong>APIs REST</strong> seguras y de alta concurrencia para movimientos contables críticos y seguimiento financiero externo.</li>
-                            <li>▹ Implementé consultas de agregación de datos que optimizaron el almacenamiento y la velocidad de respuesta en los estados financieros.</li>
-                        </ul>
-                    </div>
 
-                    <div class="work-card pl-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h3 class="text-lg font-black text-slate-900 leading-tight uppercase">Instructor Técnico de TI</h3>
-                                <p class="text-slate-500 text-[11px] font-black uppercase tracking-widest">COL. NUESTRA SEÑORA DEL PILAR</p>
-                            </div>
-                            <span class="text-[9px] font-black text-slate-400 bg-slate-50 border px-2 py-1 rounded uppercase">2022 — 2026</span>
-                        </div>
-                        <p class="text-[13px] text-slate-600 leading-relaxed">Dirigí capacitaciones técnicas de alto nivel enfocadas en lógica algorítmica de programación, control avanzado de estructuras de datos estructuradas y administración de servidores de bases de datos locales.</p>
-                    </div>
-                </div>
-            </section>
+    <section>
+        <h2>Experiencia Profesional</h2>
 
-            <section class="mb-14">
-                <h2 class="section-title">Proyectos de Ingeniería y Datos</h2>
+        <h3>LibreLabs</h3>
+        <p class="job-title">Fundador / Desarrollador Full Stack</p>
+        <p class="date">2026 - Actualidad | Proyecto propio / Startup de software</p>
 
-                <div class="space-y-8">
-                    <!-- INVORAX -->
-                    <div class="p-8 bg-slate-900 text-white rounded-[2rem] relative shadow-xl">
-                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-[9px] font-black px-6 py-2 uppercase tracking-widest">SaaS de Datos Empresariales</div>
-                        <h4 class="text-2xl font-black mb-1">INVORAX ERP | Analítica Inteligente de Datos</h4>
-                        <p class="text-blue-400 text-xs font-bold mb-5 tracking-widest uppercase">Django REST Framework | SQL Avanzado (PostgreSQL) | Multi-tenancy</p>
-                        <p class="text-[13px] text-slate-400 mb-6 leading-relaxed">
-                            Una aplicación SaaS multi-inquilino (multi-tenant) diseñada con aislamiento de datos limpio a nivel de base de datos. Construida con scripts personalizados de backend en Python que procesan registros históricos estructurales y una <strong>lógica automatizada de evaluación de datos</strong> para gestionar la analítica del seguimiento de la cadena de suministro en conglomerados corporativos.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Integración de Bases de Datos Relacionales</span>
-                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Tuberías de Datos (Pipelines)</span>
-                            <span class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/10">Arquitectura de APIs REST</span>
-                        </div>
-                        <div class="mt-8 flex items-center justify-between">
-                            <a href="https://invorax.vercel.app/" target="_blank" class="text-blue-400 text-xs font-black underline decoration-2 underline-offset-4">EXPLORAR SISTEMA</a>
-                            <span class="text-[9px] text-slate-500 uppercase font-black">Contexto: Sector de Analítica Industrial</span>
-                        </div>
-                    </div>
+        <ul>
+            <li>
+                Desarrollo y mantenimiento de proyectos de software libre
+                utilizando tecnologías Backend, Frontend y bases de datos.
+            </li>
+            <li>
+                Diseño de arquitectura de aplicaciones y APIs REST.
+            </li>
+            <li>
+                Desarrollo de aplicaciones SaaS y sistemas multi-tenant.
+            </li>
+            <li>
+                Implementación y administración de infraestructura para
+                despliegue y operación de aplicaciones.
+            </li>
+            <li>
+                Desarrollo de LibreDrop, plataforma de comercio electrónico
+                de código abierto.
+            </li>
+            <li>
+                Desarrollo de LibreDrop Cloud, versión administrada y alojada
+                de la plataforma.
+            </li>
+            <li>
+                Trabajo con Linux, Docker, Nginx, Git y tecnologías de
+                infraestructura.
+            </li>
+        </ul>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- REAL-TIME API / DATA SCRAPER CONCEPT -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                API de Automatización y Extracción de Datos
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Python / Flask</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Motor personalizado desarrollado en Python para el análisis sintáctico automático de estructuras de páginas web. Implementación de rutinas robustas de manejo de errores (`try/except`) para el procesamiento de elementos DOM, mapeo de salidas estructuradas y transmisión vía API.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Web Scraping</span><span class="tech-pill">Analizador HTML/CSS</span></div>
-                        </div>
 
-                        <!-- AI BACKEND -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                Núcleo de Pipeline de Procesamiento de Lenguaje Natural (NLP)
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Python / Pandas</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Entorno de procesamiento de texto extraído que gestiona la preparación para modelos LLM y la transformación de estructuras de datos de gran volumen mediante <strong>Pandas</strong> para sanitizar y normalizar conjuntos de datos antes de su encolado en producción.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Sanitización de Datos con Pandas</span><span class="tech-pill">Mapeo JSON</span></div>
-                        </div>
+        <h3>INVORAX</h3>
+        <p class="job-title">Desarrollador Full Stack</p>
+        <p class="date">2026 - Actualidad | Proyecto propio</p>
 
-                        <!-- PERFORMANCE API -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                Microservicio de Alta Concurrencia
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Node.js + TS</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Microservicio asíncrono optimizado para cálculos rápidos de conjuntos de datos y procesamiento de cargas útiles (payloads). Enfocado en la gestión óptima de colas de tareas y un alto rendimiento en operaciones asíncronas pesadas.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Flujo Asíncrono</span><span class="tech-pill">Alta Concurrencia</span></div>
-                        </div>
+        <ul>
+            <li>
+                Diseño y desarrollo de un sistema SaaS de gestión de inventario
+                y ventas.
+            </li>
+            <li>
+                Implementación de arquitectura multi-tenant para separar y
+                proteger los datos de diferentes clientes.
+            </li>
+            <li>
+                Desarrollo de Backend utilizando Python, Django REST Framework
+                y PostgreSQL.
+            </li>
+            <li>
+                Diseño y consumo de APIs REST.
+            </li>
+            <li>
+                Desarrollo de funcionalidades para procesamiento y
+                automatización de datos.
+            </li>
+            <li>
+                Desarrollo Full Stack, incluyendo Backend, Frontend, base de
+                datos y despliegue.
+            </li>
+        </ul>
 
-                        <!-- ACADEMIC CORE -->
-                        <div class="p-6 border border-slate-200 rounded-2xl hover:shadow-md transition-all">
-                            <h5 class="font-black text-slate-900 text-xs uppercase mb-3 flex justify-between items-center">
-                                Núcleo de Gestión Académica
-                                <span class="bg-blue-100 text-blue-700 text-[8px] px-2 py-0.5 rounded">Django / SQL</span>
-                            </h5>
-                            <p class="text-[12px] text-slate-600 leading-relaxed mb-4">
-                                Motor de manipulación de datos diseñado para actualizaciones masivas en lote (batch) de bases de datos, cálculos estadísticos automatizados y generación dinámica de reportes en tiempo real libres de errores.
-                            </p>
-                            <div class="flex gap-2"><span class="tech-pill">Procesamiento por Lotes</span><span class="tech-pill">Agregación SQL</span></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Source Code & Portfolio -->
-            <section class="no-print border-t border-slate-100 pt-10">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="text-center md:text-left">
-                        <h4 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-1">Código Fuente e Ingeniería</h4>
-                        <p class="text-[11px] text-slate-500">Explora la arquitectura de estos sistemas en mi GitHub y portafolio personal.</p>
-                    </div>
-                    <div class="flex gap-4">
-                        <a href="https://sebastian-rodas.vercel.app/" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg">
-                            PORTAFOLIO
-                        </a>
-                        <a href="https://github.com/Sebas16608" target="_blank" class="bg-slate-900 text-white px-8 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg">
-                            GITHUB
-                        </a>
-                    </div>
-                </div>
-            </section>
+        <h3>COOPESOL</h3>
+        <p class="job-title">Desarrollador Backend</p>
+        <p class="date">Agosto 2025 - Octubre 2025 | Fintech / Servicios Financieros</p>
 
-        </main>
-    </div>
+        <ul>
+            <li>
+                Desarrollo y mantenimiento de lógica Backend para sistemas
+                relacionados con transacciones financieras.
+            </li>
+            <li>
+                Diseño y modificación de modelos relacionales utilizando
+                PostgreSQL.
+            </li>
+            <li>
+                Desarrollo de APIs REST para comunicación entre servicios
+                y aplicaciones.
+            </li>
+            <li>
+                Implementación de consultas SQL y operaciones de agregación
+                de datos.
+            </li>
+            <li>
+                Desarrollo de scripts para automatización de procesos.
+            </li>
+            <li>
+                Trabajo con Python y tecnologías orientadas al desarrollo
+                Backend.
+            </li>
+        </ul>
 
-    <!-- Export Button -->
-    <div class="max-w-5xl mx-auto mt-10 text-center no-print pb-12">
-        <button onclick="window.print()" class="bg-[#0f172a] hover:bg-blue-700 text-white font-black py-5 px-16 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95 text-[10px] uppercase tracking-[0.2em]">
-            Exportar CV de Ingeniería (PDF)
-        </button>
-    </div>
+
+        <h3>Colegio Nuestra Señora del Pilar</h3>
+        <p class="job-title">Instructor Técnico de TI</p>
+        <p class="date">2022 - 2026 | Educación</p>
+
+        <ul>
+            <li>
+                Enseñanza de programación y fundamentos de informática.
+            </li>
+            <li>
+                Enseñanza de lógica algorítmica y resolución de problemas.
+            </li>
+            <li>
+                Introducción a estructuras de datos y conceptos de programación.
+            </li>
+            <li>
+                Desarrollo de ejercicios prácticos para fortalecer habilidades
+                de programación.
+            </li>
+            <li>
+                Uso y enseñanza de herramientas tecnológicas.
+            </li>
+        </ul>
+    </section>
+
+
+    <section class="skills">
+        <h2>Habilidades Técnicas</h2>
+
+        <p>
+            <strong>Lenguajes:</strong>
+            Python, JavaScript, TypeScript, C, C++, C#, Rust, SQL
+        </p>
+
+        <p>
+            <strong>Backend y Frameworks:</strong>
+            Django, Django REST Framework, Flask, Node.js, Express.js,
+            .NET, ASP.NET
+        </p>
+
+        <p>
+            <strong>Bases de Datos:</strong>
+            PostgreSQL, SQLite, SQL Server
+        </p>
+
+        <p>
+            <strong>Procesamiento de Datos:</strong>
+            Pandas, JSON, SQL, agregación de datos, automatización de procesos
+        </p>
+
+        <p>
+            <strong>Web:</strong>
+            HTML5, CSS3, REST APIs
+        </p>
+
+        <p>
+            <strong>Web Scraping:</strong>
+            BeautifulSoup, Requests, extracción y procesamiento de datos web
+        </p>
+
+        <p>
+            <strong>Infraestructura:</strong>
+            Linux, Arch Linux, Docker, Nginx, Shell Scripting,
+            administración de servidores, self-hosting
+        </p>
+
+        <p>
+            <strong>Control de Versiones:</strong>
+            Git, GitHub
+        </p>
+
+        <p>
+            <strong>Buenas Prácticas:</strong>
+            Clean Code, principios SOLID, automatización, arquitectura de
+            software, separación de responsabilidades y diseño de APIs
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Proyectos Destacados</h2>
+
+        <h3>INVORAX</h3>
+        <p>
+            Sistema SaaS de gestión de inventario y ventas con arquitectura
+            multi-tenant. Desarrollado utilizando Python, Django REST Framework
+            y PostgreSQL, con aislamiento de datos por cliente, APIs REST,
+            automatización y procesamiento de información.
+        </p>
+
+        <h3>LibreLabs</h3>
+        <p>
+            Startup de software enfocada en el desarrollo de soluciones de
+            código abierto. Incluye proyectos como LibreDrop, una plataforma
+            open source de comercio electrónico, y LibreDrop Cloud, una
+            solución administrada para utilizar la plataforma sin gestionar
+            directamente la infraestructura.
+        </p>
+
+        <h3>API de Extracción de Datos</h3>
+        <p>
+            Desarrollo de una API utilizando Python y Flask para automatizar
+            procesos de web scraping y extracción de información.
+        </p>
+
+        <h3>Data Processing Pipeline</h3>
+        <p>
+            Procesamiento y transformación de información utilizando Python,
+            Pandas y JSON para automatización y análisis de datos.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Educación</h2>
+
+        <h3>Universidad Mariano Gálvez de Guatemala</h3>
+        <p>
+            <strong>Ingeniería en Sistemas</strong>
+        </p>
+        <p class="date">2026 - Actualidad</p>
+    </section>
+
+
+    <section>
+        <h2>Información Adicional</h2>
+
+        <ul>
+            <li>
+                Experiencia práctica con Linux y Arch Linux como entorno
+                principal de desarrollo.
+            </li>
+            <li>
+                Experiencia con software de código abierto y proyectos
+                self-hosted.
+            </li>
+            <li>
+                Experiencia desarrollando proyectos propios de software.
+            </li>
+            <li>
+                Enfoque principal en Backend, APIs, bases de datos y
+                automatización.
+            </li>
+            <li>
+                Interés en desarrollo de software, infraestructura y
+                tecnologías Open Source.
+            </li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2>Enlaces</h2>
+
+        <p>
+            <strong>Portfolio:</strong>
+            https://sebastian-portfolio-one.vercel.app/
+        </p>
+
+        <p>
+            <strong>GitHub:</strong>
+            https://github.com/Sebas16608
+        </p>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            https://www.linkedin.com/in/sebastián-rodas-65564b303/
+        </p>
+    </section>
 
 </body>
 </html>
+```

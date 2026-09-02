@@ -3,406 +3,657 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Angel Sebastián Rodas Rodriguez, Backend / Full Stack Software Engineer.">
+    <title>CV - Angel Sebastián Rodas Rodriguez | Backend / Full Stack Software Engineer</title>
 
-    <title>CV - Angel Sebastián Rodas Rodríguez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --accent: #2563eb;
+            --accent-dark: #1e3a8a;
+            --navy: #0f2a4a;
+            --ink: #1e293b;
+            --muted: #5b6b7f;
+            --headings: #0f172a;
+            --bg: #eef2f7;
+            --surface: #ffffff;
+            --border: #dfe6ef;
+            --card: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { -webkit-text-size-adjust: 100%; }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111;
-            background: #fff;
-            max-width: 850px;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.55;
+            padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .cv {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 40px;
-            line-height: 1.45;
-            font-size: 11pt;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(15, 42, 74, 0.08);
+            overflow: hidden;
         }
 
-        h1 {
-            font-size: 24pt;
-            margin: 0;
-            text-align: center;
+        .cv-bar { height: 5px; background: var(--accent); }
+
+        /* ---------- HEADER ---------- */
+        .cv-header {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 28px;
+            align-items: center;
+            padding: 34px 38px;
+            background: var(--navy);
+            color: #ffffff;
         }
 
-        .headline {
-            text-align: center;
-            font-size: 13pt;
-            font-weight: bold;
-            margin: 5px 0 10px;
+        .photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            display: block;
         }
 
-        .contact {
-            text-align: center;
-            font-size: 10pt;
-            margin-bottom: 25px;
+        .header-main h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            line-height: 1.12;
+            color: #ffffff;
         }
 
-        h2 {
-            font-size: 14pt;
-            border-bottom: 1px solid #222;
-            padding-bottom: 4px;
-            margin-top: 22px;
-            margin-bottom: 10px;
+        .role {
+            margin-top: 6px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: #93c5fd;
+            letter-spacing: 0.01em;
+        }
+
+        .location {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #cbd5e1;
+        }
+
+        .location .sep { color: #64748b; padding: 0 4px; }
+
+        .header-links {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .header-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 999px;
+            color: #e2e8f0;
+            font-size: 0.84rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.15s ease, border-color 0.15s ease;
+        }
+
+        .header-links a:hover { background: rgba(255, 255, 255, 0.16); }
+
+        /* ---------- SECTIONS ---------- */
+        section { padding: 26px 38px; border-top: 1px solid var(--border); }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
         }
 
-        h3 {
-            font-size: 11.5pt;
-            margin: 14px 0 2px;
+        .section-title::before {
+            content: "";
+            width: 26px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            flex: none;
         }
 
-        .job-title {
-            font-weight: bold;
+        .profile p { font-size: 0.95rem; color: #334155; }
+        .profile p + p { margin-top: 10px; }
+
+        /* ---------- EXPERIENCE ---------- */
+        .job {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
         }
 
-        .date {
-            font-style: italic;
+        .job:last-child { margin-bottom: 0; }
+
+        .job-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+
+        .job h3 { font-size: 1.02rem; font-weight: 700; color: var(--headings); }
+
+        .job-role { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-top: 1px; }
+
+        .job-date {
+            white-space: nowrap;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-align: right;
+        }
+
+        .job-meta { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+        .job-meta strong { color: #475569; font-weight: 600; }
+
+        .job-desc { font-size: 0.9rem; color: #334155; margin-top: 8px; }
+
+        .job ul { margin: 6px 0 0; padding-left: 18px; }
+        .job li { font-size: 0.88rem; color: #334155; margin-bottom: 4px; }
+        .job li:last-child { margin-bottom: 0; }
+
+        /* ---------- PROJECTS ---------- */
+        .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+        .project {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+
+        .project h3 { font-size: 0.98rem; font-weight: 700; color: var(--headings); }
+
+        .project p { font-size: 0.88rem; color: #334155; margin-top: 6px; }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        .tags li {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--navy);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+        }
+
+        /* ---------- SKILLS ---------- */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+
+        .skill-cat {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        .skill-cat h3 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
             margin-bottom: 5px;
         }
 
-        ul {
-            margin-top: 5px;
-            padding-left: 20px;
+        .skill-cat p, .skill-cat ul { font-size: 0.87rem; color: #334155; }
+        .skill-cat ul { list-style: none; padding: 0; margin: 0; }
+
+        /* ---------- EDUCATION & LINKS ---------- */
+        .education {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
         }
 
-        li {
-            margin-bottom: 4px;
+        .education h3 { font-size: 1.02rem; font-weight: 700; color: var(--headings); }
+        .education p { font-size: 0.9rem; color: #334155; margin-top: 4px; }
+        .education .edu-date { font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-top: 6px; }
+
+        .links-list { list-style: none; padding: 0; margin: 0; }
+        .links-list li { font-size: 0.92rem; margin-bottom: 8px; }
+        .links-list li:last-child { margin-bottom: 0; }
+        .links-list .link-label { display: inline-block; min-width: 84px; font-weight: 700; color: var(--headings); }
+        .links-list a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .links-list a:hover { text-decoration: underline; }
+
+        /* ---------- PRINT BUTTON ---------- */
+        .btn-print {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 50;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--navy);
+            color: #ffffff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font: 600 0.85rem/1 'Inter', system-ui, sans-serif;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(15, 42, 74, 0.28);
+            transition: background 0.15s ease, transform 0.15s ease;
         }
 
-        p {
-            margin: 5px 0;
+        .btn-print:hover { background: var(--accent); transform: translateY(-1px); }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 820px) {
+            body { padding: 20px 12px; }
+            .cv { border-radius: 12px; }
+            .cv-header {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                text-align: center;
+                padding: 28px 22px;
+            }
+            .header-main { width: 100%; display: flex; flex-direction: column; align-items: center; }
+            .photo { width: 130px; height: 130px; }
+            .header-links { justify-content: center; }
+            section { padding: 22px 20px; }
+            .projects, .skills-grid { grid-template-columns: 1fr; }
+            .job-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+            .job-date { text-align: left; }
         }
 
-        .skills p {
-            margin-bottom: 7px;
-        }
-
-        a {
-            color: #111;
-            text-decoration: none;
-        }
-
+        /* ---------- PRINT ---------- */
         @media print {
-            body {
-                margin: 0;
-                padding: 25px;
+            @page { size: A4; margin: 10mm 11mm 10mm 11mm; }
+
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
-            a {
-                color: #111;
-                text-decoration: none;
+            html, body {
+                background: #ffffff !important;
+                color: #111111 !important;
+                padding: 0;
             }
+
+            body { font-size: 9.5pt; }
+
+            .cv {
+                max-width: 100%;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                overflow: visible;
+            }
+
+            .cv-bar { height: 2px; background: #111111; }
+
+            .cv-header {
+                background: #ffffff !important;
+                color: #111111 !important;
+                grid-template-columns: 104px 1fr;
+                gap: 18px;
+                padding: 0 0 12px 0;
+                border-bottom: 1.5px solid #111111;
+            }
+
+            .cv-header h1 { color: #111111 !important; font-size: 1.6rem; }
+
+            .role { color: #1e3a8a !important; }
+
+            .location { color: #111111 !important; }
+            .location .sep { color: #111111; }
+
+            .header-links a {
+                background: #ffffff;
+                border: 1px solid #111111;
+                color: #111111;
+                border-radius: 0;
+                font-size: 7.5pt;
+            }
+
+            .photo {
+                width: 104px;
+                height: 104px;
+                border: 1px solid #111111;
+                box-shadow: none;
+            }
+
+            section {
+                padding: 12px 0;
+                border-top: 1px solid #cccccc;
+                break-inside: auto;
+            }
+
+            .section-title { margin-bottom: 8px; }
+
+            .profile p { font-size: 9pt; }
+
+            .job, .project, .skill-cat, .education {
+                background: #ffffff;
+                border: 0.5px solid #cccccc;
+                border-radius: 4px;
+                break-inside: avoid;
+                padding: 8px 10px;
+            }
+
+            .job { margin-bottom: 9px; page-break-inside: avoid; }
+            .job p, .job li, .project p, .skill-cat p, .skill-cat ul, .education p { font-size: 8.5pt; }
+            .job h3, .project h3, .education h3 { font-size: 9.5pt; }
+            .job li { margin-bottom: 2px; }
+
+            .tags li { background: #ffffff; border: 0.5px solid #999999; border-radius: 999px; font-size: 6.5pt; }
+
+            .links-list li { font-size: 8.5pt; }
+            .links-list a { color: #111111; text-decoration: none; }
+
+            a { color: #111111; text-decoration: none; }
+
+            .no-print { display: none !important; }
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Ángel Sebastián Rodas Rodríguez</h1>
+    <button class="btn-print no-print" onclick="window.print()" type="button" aria-label="Exportar CV en PDF">Exportar PDF</button>
 
-        <div class="headline">
-            Backend / Full Stack Software Engineer
-        </div>
+    <main class="cv">
+        <div class="cv-bar" aria-hidden="true"></div>
 
-        <div class="contact">
-            Guatemala | Disponible para trabajo remoto<br>
-            Portfolio: https://sebastian-portfolio-one.vercel.app/<br>
-            GitHub: https://github.com/Sebas16608<br>
-            LinkedIn: https://www.linkedin.com/in/sebastián-rodas-65564b303/
-        </div>
-    </header>
+        <!-- HEADER -->
+        <header class="cv-header">
+            <img class="photo" src="imagen.png" alt="Angel Sebastián Rodas Rodriguez">
 
+            <div class="header-main">
+                <h1>Angel Sebastián Rodas Rodriguez</h1>
+                <p class="role">Backend / Full Stack Software Engineer</p>
 
-    <section>
-        <h2>Perfil Profesional</h2>
+                <p class="location">Guatemala<span class="sep">|</span>Remote-ready</p>
 
-        <p>
-            Desarrollador de software con enfoque en Backend y experiencia en
-            desarrollo Full Stack. Experiencia trabajando con Python, Django,
-            Django REST Framework, Flask, JavaScript, TypeScript, C y C++.
-            Experiencia práctica en desarrollo de sistemas fintech, APIs REST,
-            aplicaciones SaaS multi-tenant, bases de datos relacionales,
-            automatización de procesos, procesamiento de datos y administración
-            de sistemas Linux.
-        </p>
+                <nav class="header-links" aria-label="Enlaces de contacto">
+                    <a href="https://sebastian-portfolio-one.vercel.app/">Portfolio</a>
+                    <a href="https://github.com/Sebas16608">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sebasti%C3%A1n-rodas-65564b303/">LinkedIn</a>
+                </nav>
+            </div>
+        </header>
 
-        <p>
-            Interesado en desarrollar software mantenible, resolver problemas
-            mediante automatización y participar en proyectos donde pueda
-            aplicar conocimientos de programación, arquitectura de software,
-            bases de datos e infraestructura.
-        </p>
-    </section>
+        <!-- PERFIL PROFESIONAL -->
+        <section class="profile" aria-label="Perfil Profesional">
+            <h2 class="section-title">Perfil Profesional</h2>
 
+            <p>
+                Desarrollador de software con enfoque en Backend y desarrollo Full Stack,
+                especializado en <strong>Python</strong>, <strong>Django</strong>, <strong>Flask</strong>,
+                <strong>JavaScript</strong> y <strong>TypeScript</strong>. Experiencia en desarrollo de
+                sistemas financieros, plataformas SaaS multi-tenant, sistemas de inventario,
+                APIs REST y automatización de procesos.
+            </p>
 
-    <section>
-        <h2>Experiencia Profesional</h2>
+            <p>
+                Experiencia práctica con <strong>PostgreSQL</strong>, SQL, <strong>Linux</strong>,
+                <strong>Docker</strong>, <strong>Nginx</strong> y arquitectura de aplicaciones.
+                Fundador y desarrollador de proyectos de software libre, con interés en infraestructura,
+                self-hosting y construcción de productos tecnológicos.
+            </p>
+        </section>
 
-        <h3>LibreLabs</h3>
-        <p class="job-title">Fundador / Desarrollador Full Stack</p>
-        <p class="date">2026 - Actualidad | Proyecto propio / Startup de software</p>
+        <!-- EXPERIENCIA -->
+        <section aria-label="Experiencia">
+            <h2 class="section-title">Experiencia</h2>
 
-        <ul>
-            <li>
-                Desarrollo y mantenimiento de proyectos de software libre
-                utilizando tecnologías Backend, Frontend y bases de datos.
-            </li>
-            <li>
-                Diseño de arquitectura de aplicaciones y APIs REST.
-            </li>
-            <li>
-                Desarrollo de aplicaciones SaaS y sistemas multi-tenant.
-            </li>
-            <li>
-                Implementación y administración de infraestructura para
-                despliegue y operación de aplicaciones.
-            </li>
-            <li>
-                Desarrollo de LibreDrop, plataforma de comercio electrónico
-                de código abierto.
-            </li>
-            <li>
-                Desarrollo de LibreDrop Cloud, versión administrada y alojada
-                de la plataforma.
-            </li>
-            <li>
-                Trabajo con Linux, Docker, Nginx, Git y tecnologías de
-                infraestructura.
-            </li>
-        </ul>
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <h3>LibreLabs</h3>
+                        <p class="job-role">Fundador / Desarrollador Full Stack</p>
+                    </div>
+                    <p class="job-date"><time datetime="2026">2026</time> — Actualidad</p>
+                </div>
+                <p class="job-meta"><strong>Tipo:</strong> Proyecto propio / Startup de software libre</p>
+                <p class="job-desc">
+                    Fundé y desarrollo LibreLabs, una startup enfocada en crear soluciones de software de código abierto.
+                </p>
+                <ul>
+                    <li>
+                        Desarrollo de productos como LibreDrop, una plataforma de comercio electrónico open source,
+                        y LibreLabs Cloud, servicio de infraestructura administrada para hospedar y operar proyectos OSS.
+                    </li>
+                    <li>
+                        Participación en todo el ciclo de desarrollo: arquitectura, frontend, backend,
+                        bases de datos, infraestructura y despliegue.
+                    </li>
+                </ul>
+            </article>
 
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <h3>INVORAX</h3>
+                        <p class="job-role">Desarrollador Full Stack</p>
+                    </div>
+                    <p class="job-date"><time datetime="2026">2026</time> — Actualidad</p>
+                </div>
+                <p class="job-meta"><strong>Tipo:</strong> Proyecto propio</p>
+                <p class="job-desc">Sistema SaaS de gestión de inventario con arquitectura multi-tenant.</p>
+                <ul>
+                    <li>Diseño y desarrollo de frontend, backend, base de datos y despliegue.</li>
+                    <li>
+                        Desarrollo backend con Python, Django REST Framework y PostgreSQL.
+                    </li>
+                    <li>
+                        Implementación de APIs REST, multi-tenancy, aislamiento de datos,
+                        automatización y procesamiento de información.
+                    </li>
+                </ul>
+            </article>
 
-        <h3>INVORAX</h3>
-        <p class="job-title">Desarrollador Full Stack</p>
-        <p class="date">2026 - Actualidad | Proyecto propio</p>
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <h3>COOPESOL</h3>
+                        <p class="job-role">Desarrollador Backend</p>
+                    </div>
+                    <p class="job-date"><time datetime="2025-08">Agosto 2025</time> — <time datetime="2025-10">Octubre 2025</time></p>
+                </div>
+                <p class="job-meta"><strong>Industria:</strong> Fintech / Servicios Financieros</p>
+                <ul>
+                    <li>Desarrollo de aplicaciones backend y scripts de automatización.</li>
+                    <li>Desarrollo de lógica para sistemas financieros y transacciones.</li>
+                    <li>Implementación de APIs REST.</li>
+                    <li>Trabajo con PostgreSQL y SQL.</li>
+                    <li>Diseño y modificación de modelos relacionales.</li>
+                    <li>Consultas y agregación de datos.</li>
+                    <li>Automatización de procesos.</li>
+                </ul>
+            </article>
 
-        <ul>
-            <li>
-                Diseño y desarrollo de un sistema SaaS de gestión de inventario
-                y ventas.
-            </li>
-            <li>
-                Implementación de arquitectura multi-tenant para separar y
-                proteger los datos de diferentes clientes.
-            </li>
-            <li>
-                Desarrollo de Backend utilizando Python, Django REST Framework
-                y PostgreSQL.
-            </li>
-            <li>
-                Diseño y consumo de APIs REST.
-            </li>
-            <li>
-                Desarrollo de funcionalidades para procesamiento y
-                automatización de datos.
-            </li>
-            <li>
-                Desarrollo Full Stack, incluyendo Backend, Frontend, base de
-                datos y despliegue.
-            </li>
-        </ul>
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <h3>Colegio Nuestra Señora del Pilar</h3>
+                        <p class="job-role">Instructor Técnico de TI</p>
+                    </div>
+                    <p class="job-date"><time datetime="2022">2022</time> — <time datetime="2026">2026</time></p>
+                </div>
+                <ul>
+                    <li>Enseñanza de programación y lógica algorítmica.</li>
+                    <li>Enseñanza de estructuras de datos y resolución de problemas.</li>
+                    <li>Uso de herramientas tecnológicas.</li>
+                    <li>Desarrollo de ejercicios prácticos de programación.</li>
+                </ul>
+            </article>
+        </section>
 
+        <!-- PROYECTOS DESTACADOS -->
+        <section aria-label="Proyectos Destacados">
+            <h2 class="section-title">Proyectos Destacados</h2>
 
-        <h3>COOPESOL</h3>
-        <p class="job-title">Desarrollador Backend</p>
-        <p class="date">Agosto 2025 - Octubre 2025 | Fintech / Servicios Financieros</p>
+            <div class="projects">
+                <article class="project">
+                    <h3>INVORAX</h3>
+                    <p>SaaS de inventario y ventas con arquitectura multi-tenant.</p>
+                    <ul class="tags">
+                        <li>Multi-tenant</li>
+                        <li>Django REST Framework</li>
+                        <li>PostgreSQL</li>
+                        <li>REST APIs</li>
+                        <li>Automatización</li>
+                    </ul>
+                </article>
 
-        <ul>
-            <li>
-                Desarrollo y mantenimiento de lógica Backend para sistemas
-                relacionados con transacciones financieras.
-            </li>
-            <li>
-                Diseño y modificación de modelos relacionales utilizando
-                PostgreSQL.
-            </li>
-            <li>
-                Desarrollo de APIs REST para comunicación entre servicios
-                y aplicaciones.
-            </li>
-            <li>
-                Implementación de consultas SQL y operaciones de agregación
-                de datos.
-            </li>
-            <li>
-                Desarrollo de scripts para automatización de procesos.
-            </li>
-            <li>
-                Trabajo con Python y tecnologías orientadas al desarrollo
-                Backend.
-            </li>
-        </ul>
+                <article class="project">
+                    <h3>LibreLabs</h3>
+                    <p>Startup de software libre con productos como LibreDrop y LibreDrop Cloud.</p>
+                    <ul class="tags">
+                        <li>LibreDrop</li>
+                        <li>LibreDrop Cloud</li>
+                        <li>LibreLabs Cloud</li>
+                        <li>Open Source</li>
+                        <li>SaaS</li>
+                        <li>Self-hosting</li>
+                        <li>Cloud Infrastructure</li>
+                    </ul>
+                </article>
 
+                <article class="project">
+                    <h3>API de Automatización y Extracción de Datos</h3>
+                    <p>API en Python con Flask para automatizar web scraping y extracción de información.</p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Web Scraping</li>
+                        <li>BeautifulSoup</li>
+                        <li>Requests</li>
+                    </ul>
+                </article>
 
-        <h3>Colegio Nuestra Señora del Pilar</h3>
-        <p class="job-title">Instructor Técnico de TI</p>
-        <p class="date">2022 - 2026 | Educación</p>
+                <article class="project">
+                    <h3>Pipeline de Procesamiento de Datos</h3>
+                    <p>Procesamiento y transformación de datos para automatización y análisis.</p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>JSON</li>
+                        <li>Data Processing</li>
+                        <li>Automatización</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-        <ul>
-            <li>
-                Enseñanza de programación y fundamentos de informática.
-            </li>
-            <li>
-                Enseñanza de lógica algorítmica y resolución de problemas.
-            </li>
-            <li>
-                Introducción a estructuras de datos y conceptos de programación.
-            </li>
-            <li>
-                Desarrollo de ejercicios prácticos para fortalecer habilidades
-                de programación.
-            </li>
-            <li>
-                Uso y enseñanza de herramientas tecnológicas.
-            </li>
-        </ul>
-    </section>
+        <!-- HABILIDADES TÉCNICAS -->
+        <section aria-label="Habilidades Técnicas">
+            <h2 class="section-title">Habilidades Técnicas</h2>
 
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h3>Lenguajes</h3>
+                    <p>Python, JavaScript, TypeScript, C, C++, C#, Rust, SQL</p>
+                </div>
 
-    <section class="skills">
-        <h2>Habilidades Técnicas</h2>
+                <div class="skill-cat">
+                    <h3>Backend</h3>
+                    <p>Django, Django REST Framework, Flask, Node.js, Express.js, .NET, ASP.NET</p>
+                </div>
 
-        <p>
-            <strong>Lenguajes:</strong>
-            Python, JavaScript, TypeScript, C, C++, C#, Rust, SQL
-        </p>
+                <div class="skill-cat">
+                    <h3>Bases de Datos</h3>
+                    <p>PostgreSQL, SQLite, SQL Server</p>
+                </div>
 
-        <p>
-            <strong>Backend y Frameworks:</strong>
-            Django, Django REST Framework, Flask, Node.js, Express.js,
-            .NET, ASP.NET
-        </p>
+                <div class="skill-cat">
+                    <h3>Datos y Automatización</h3>
+                    <p>Pandas, JSON, Web Scraping, BeautifulSoup, Requests, Shell Scripting</p>
+                </div>
 
-        <p>
-            <strong>Bases de Datos:</strong>
-            PostgreSQL, SQLite, SQL Server
-        </p>
+                <div class="skill-cat">
+                    <h3>Infraestructura</h3>
+                    <p>Linux, Arch Linux, Docker, Nginx, Git, Self-hosting</p>
+                </div>
 
-        <p>
-            <strong>Procesamiento de Datos:</strong>
-            Pandas, JSON, SQL, agregación de datos, automatización de procesos
-        </p>
+                <div class="skill-cat">
+                    <h3>Web</h3>
+                    <p>HTML5, CSS3, REST APIs</p>
+                </div>
 
-        <p>
-            <strong>Web:</strong>
-            HTML5, CSS3, REST APIs
-        </p>
+                <div class="skill-cat">
+                    <h3>Principios</h3>
+                    <p>Clean Code, SOLID, Automatización, Arquitectura de software, Separación de responsabilidades</p>
+                </div>
+            </div>
+        </section>
 
-        <p>
-            <strong>Web Scraping:</strong>
-            BeautifulSoup, Requests, extracción y procesamiento de datos web
-        </p>
+        <!-- EDUCACIÓN -->
+        <section aria-label="Educación">
+            <h2 class="section-title">Educación</h2>
 
-        <p>
-            <strong>Infraestructura:</strong>
-            Linux, Arch Linux, Docker, Nginx, Shell Scripting,
-            administración de servidores, self-hosting
-        </p>
+            <article class="education">
+                <h3>Universidad Mariano Gálvez de Guatemala</h3>
+                <p><strong>Ingeniería en Sistemas</strong></p>
+                <p class="edu-date"><time datetime="2026">2026</time> — Actualidad</p>
+            </article>
+        </section>
 
-        <p>
-            <strong>Control de Versiones:</strong>
-            Git, GitHub
-        </p>
+        <!-- ENLACES -->
+        <section aria-label="Enlaces">
+            <h2 class="section-title">Enlaces</h2>
 
-        <p>
-            <strong>Buenas Prácticas:</strong>
-            Clean Code, principios SOLID, automatización, arquitectura de
-            software, separación de responsabilidades y diseño de APIs
-        </p>
-    </section>
-
-
-    <section>
-        <h2>Proyectos Destacados</h2>
-
-        <h3>INVORAX</h3>
-        <p>
-            Sistema SaaS de gestión de inventario y ventas con arquitectura
-            multi-tenant. Desarrollado utilizando Python, Django REST Framework
-            y PostgreSQL, con aislamiento de datos por cliente, APIs REST,
-            automatización y procesamiento de información.
-        </p>
-
-        <h3>LibreLabs</h3>
-        <p>
-            Startup de software enfocada en el desarrollo de soluciones de
-            código abierto. Incluye proyectos como LibreDrop, una plataforma
-            open source de comercio electrónico, y LibreDrop Cloud, una
-            solución administrada para utilizar la plataforma sin gestionar
-            directamente la infraestructura.
-        </p>
-
-        <h3>API de Extracción de Datos</h3>
-        <p>
-            Desarrollo de una API utilizando Python y Flask para automatizar
-            procesos de web scraping y extracción de información.
-        </p>
-
-        <h3>Data Processing Pipeline</h3>
-        <p>
-            Procesamiento y transformación de información utilizando Python,
-            Pandas y JSON para automatización y análisis de datos.
-        </p>
-    </section>
-
-
-    <section>
-        <h2>Educación</h2>
-
-        <h3>Universidad Mariano Gálvez de Guatemala</h3>
-        <p>
-            <strong>Ingeniería en Sistemas</strong>
-        </p>
-        <p class="date">2026 - Actualidad</p>
-    </section>
-
-
-    <section>
-        <h2>Información Adicional</h2>
-
-        <ul>
-            <li>
-                Experiencia práctica con Linux y Arch Linux como entorno
-                principal de desarrollo.
-            </li>
-            <li>
-                Experiencia con software de código abierto y proyectos
-                self-hosted.
-            </li>
-            <li>
-                Experiencia desarrollando proyectos propios de software.
-            </li>
-            <li>
-                Enfoque principal en Backend, APIs, bases de datos y
-                automatización.
-            </li>
-            <li>
-                Interés en desarrollo de software, infraestructura y
-                tecnologías Open Source.
-            </li>
-        </ul>
-    </section>
-
-
-    <section>
-        <h2>Enlaces</h2>
-
-        <p>
-            <strong>Portfolio:</strong>
-            https://sebastian-portfolio-one.vercel.app/
-        </p>
-
-        <p>
-            <strong>GitHub:</strong>
-            https://github.com/Sebas16608
-        </p>
-
-        <p>
-            <strong>LinkedIn:</strong>
-            https://www.linkedin.com/in/sebastián-rodas-65564b303/
-        </p>
-    </section>
+            <ul class="links-list">
+                <li>
+                    <span class="link-label">Portfolio:</span>
+                    <a href="https://sebastian-portfolio-one.vercel.app/">https://sebastian-portfolio-one.vercel.app/</a>
+                </li>
+                <li>
+                    <span class="link-label">GitHub:</span>
+                    <a href="https://github.com/Sebas16608">https://github.com/Sebas16608</a>
+                </li>
+                <li>
+                    <span class="link-label">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/sebasti%C3%A1n-rodas-65564b303/">https://www.linkedin.com/in/sebastián-rodas-65564b303/</a>
+                </li>
+            </ul>
+        </section>
+    </main>
 
 </body>
 </html>
